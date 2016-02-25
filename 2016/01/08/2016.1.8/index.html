@@ -79,7 +79,7 @@
 // 可以通过attribute匹配获取DOM对象，例如
 / 返回第一个包含属性data-time且值为2015的对象
 可以通过简单的组合提高查询便利性，例如">
-<meta property="og:updated_time" content="2016-02-25T07:24:46.586Z">
+<meta property="og:updated_time" content="2016-02-25T08:12:27.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mini-query的实现">
 <meta name="twitter:description" content="mini-query的实现下列是要求
@@ -255,6 +255,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS的世界/" itemprop="url" rel="index">
+                    <span itemprop="name">JS的世界</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -466,11 +485,18 @@ function $(selector){
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
           
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
