@@ -57,25 +57,34 @@
 
 
 
-<meta name="description" content="2016.1.9今天不知道为什么好开森。今天看起来码了很多代码其实根本就没有多少。总结一下：
+<meta name="description" content="最近刚开学学习也不能逼得自己太急。大概的路线是：
 
-事件绑定
-兼容element.addEventListener(event, listener, false);element.attachEvent(&amp;quot;on&amp;quot; + event, listener);element[&amp;quot;on&amp;quot; + event] = listener">
+看完犀牛书
+其中看高程
+再看设计模式
+在接触jQuery
+在接触框架。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="事件委托">
-<meta property="og:url" content="http://www.maiff.ren/2016/01/09/2016.1.9（事件委托）/index.html">
+<meta property="og:title" content="学习之路">
+<meta property="og:url" content="http://www.maiff.ren/2016/03/01/学习之路/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="2016.1.9今天不知道为什么好开森。今天看起来码了很多代码其实根本就没有多少。总结一下：
+<meta property="og:description" content="最近刚开学学习也不能逼得自己太急。大概的路线是：
 
-事件绑定
-兼容element.addEventListener(event, listener, false);element.attachEvent(&amp;quot;on&amp;quot; + event, listener);element[&amp;quot;on&amp;quot; + event] = listener">
-<meta property="og:updated_time" content="2016-02-25T08:12:27.262Z">
+看完犀牛书
+其中看高程
+再看设计模式
+在接触jQuery
+在接触框架。">
+<meta property="og:updated_time" content="2016-03-01T08:13:35.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="事件委托">
-<meta name="twitter:description" content="2016.1.9今天不知道为什么好开森。今天看起来码了很多代码其实根本就没有多少。总结一下：
+<meta name="twitter:title" content="学习之路">
+<meta name="twitter:description" content="最近刚开学学习也不能逼得自己太急。大概的路线是：
 
-事件绑定
-兼容element.addEventListener(event, listener, false);element.attachEvent(&amp;quot;on&amp;quot; + event, listener);element[&amp;quot;on&amp;quot; + event] = listener">
+看完犀牛书
+其中看高程
+再看设计模式
+在接触jQuery
+在接触框架。">
 
 
 
@@ -93,7 +102,7 @@
   };
 </script>
 
-  <title> 事件委托 | Maiff </title>
+  <title> 学习之路 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -213,7 +222,7 @@
             
             
               
-                事件委托
+                学习之路
               
             
           </h1>
@@ -225,8 +234,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-09T11:53:12+08:00" content="2016-01-09">
-              2016-01-09
+            <time itemprop="dateCreated" datetime="2016-03-01T16:10:53+08:00" content="2016-03-01">
+              2016-03-01
             </time>
           </span>
 
@@ -239,8 +248,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS的世界/" itemprop="url" rel="index">
-                    <span itemprop="name">JS的世界</span>
+                  <a href="/categories/杂/" itemprop="url" rel="index">
+                    <span itemprop="name">杂</span>
                   </a>
                 </span>
 
@@ -255,8 +264,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/09/2016.1.9（事件委托）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/2016.1.9（事件委托）/" itemprop="commentsCount"></span>
+                <a href="/2016/03/01/学习之路/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/01/学习之路/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -277,59 +286,14 @@
       
 
       
-        <h2 id="2016-1-9"><a href="#2016-1-9" class="headerlink" title="2016.1.9"></a>2016.1.9</h2><p>今天不知道为什么好开森。<br>今天看起来码了很多代码其实根本就没有多少。<br>总结一下：</p>
+        <p>最近刚开学学习也不能逼得自己太急。<br>大概的路线是：</p>
 <ul>
-<li>事件绑定<ul>
-<li>兼容<br><code>element.addEventListener(event, listener, false);</code><br><code>element.attachEvent(&quot;on&quot; + event, listener);</code><br><code>element[&quot;on&quot; + event] = listener;</code><br>PS.这里对第三个参数进行<a href="http://www.cftea.com/c/2008/10/MQ0U26KP565GNM5Q.asp" target="_blank" rel="external">说明</a>,它会改变事件执行顺序，是冒泡还是捕获。</li>
-<li>解绑的兼容<br><code>element.removeEventListener(event, listener, false);</code><br><code>lement.detachEvent(&quot;on&quot; + event, listener);</code><br><code>element[&quot;on&quot; + event] = null;</code></li>
+<li>看完犀牛书</li>
+<li>其中看高程</li>
+<li>再看设计模式</li>
+<li>在接触jQuery</li>
+<li>在接触框架。</li>
 </ul>
-</li>
-<li>事件代理/委托<ul>
-<li>基础就是事件冒泡</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>为父节点添加一个click事件，当子节点被点击的时候，click事件会从子节点开始向上冒泡。父节点捕获到事件之后，通过判断e.target.nodeName来判断是否为我们需要处理的节点。并且通过e.target拿到了被点击的Li节点。从而可以获取到相应的信息，并作处理。</p>
-</blockquote>
-<p>对应代码：</p>
-<pre><code> element.addEventListener(eventName, function(ev){
-    var oEvent=ev||event;
-    var target=oEvent.target||oEvent.srcElement;
-    if(target.nodeName.toLowerCase()==tag){
-        listener(oEvent);
-    }
-}, false);
-</code></pre><p>类似于观察者模式</p>
-<p><a href="http://blog.csdn.net/myhahaxiao/article/details/6952321" target="_blank" rel="external">还有call、与apply的应用。</a><br>一句话概括改变对象的this指向。<br>apply的不同在于传入对象是一组数组。</p>
-<p><strong>BOM对象：</strong></p>
-<p>-浏览器的一些信息</p>
-<pre><code>window.navigator.userAgent
-</code></pre><ul>
-<li><p><strong><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="external">cookie</a></strong><br><code>value[; expires=date][; domain=domain][; path=path][; secure]</code>   </p>
-</li>
-<li><p>JS中对cookie的操作</p>
-<pre><code>function setCookie(cookieName, cookieValue, expiredays) {
-    // your implement
-    var nowdate=new Date();
-    nowdate.setDate(nowdate.getDate()+expiredays);
-    document.cookie=cookieName+&apos;=&apos;+escape(cookieValue)+((expiredays==null)?&apos;&apos;:&apos;;expires=&apos;+nowdate.toGMTString())
-}
-
-function getCookie(cookieName){
-    if(document.cookie.length&gt;0){
-        var cookie_start=document.cookie.indexOf(cookieName+&apos;=&apos;);
-        if(cookie_start!=-1){
-            cookie_start=cookie_start+cookieName.length+1;
-            var cookie_end=document.cookie.indexOf(&apos;;&apos;,cookie_start);
-            if(cookie_end==-1)cookie_end=document.cookie.length;
-            return unescape(document.cookie.substring(cookie_start,cookie_end));
-        }
-    }
-}
-</code></pre></li>
-</ul>
-<p>PS.对于value进行编码在mozilla的JS的MDN中escape已经废弃就没有用了</p>
 
       
     </div>
@@ -341,17 +305,13 @@ function getCookie(cookieName){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/08/2016.1.8/" rel="next" title="mini-query的实现">
-                <i class="fa fa-chevron-left"></i> mini-query的实现
+              <a href="/2016/02/29/《蝴蝶书总结（1）》/" rel="next" title="《蝴蝶书总结（1）》">
+                <i class="fa fa-chevron-left"></i> 《蝴蝶书总结（1）》
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/11/2016.1.11/" rel="prev" title="Ajax">
-                Ajax <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -376,8 +336,8 @@ function getCookie(cookieName){
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/09/2016.1.9（事件委托）/"
-           data-title="事件委托" data-url="http://www.maiff.ren/2016/01/09/2016.1.9（事件委托）/">
+      <div class="ds-thread" data-thread-key="2016/03/01/学习之路/"
+           data-title="学习之路" data-url="http://www.maiff.ren/2016/03/01/学习之路/">
       </div>
     
   </div>
@@ -491,7 +451,7 @@ function getCookie(cookieName){
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016-1-9"><span class="nav-number">1.</span> <span class="nav-text">2016.1.9</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
