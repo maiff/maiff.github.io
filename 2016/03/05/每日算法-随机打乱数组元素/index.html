@@ -57,56 +57,40 @@
 
 
 
-<meta name="description" content="this的理解今天在群里看到有个同学发了一个面试题
-var x = 2;
-var obj = {
-x:1,
-bar:{
-foo:function(){
-return this.x;
-}
-}
-}
-var go = obj.bar.foo;
-console.log(go()) //输出什么？
-console.log(obj.bar.foo()) //输出什么？
-按照我的理解我认为这两个this所代表的">
+<meta name="description" content="方法一function shuffle(array) {
+     var copy=[],
+        n = array.length,
+        i;
+    // 如果还剩有元素。。
+    while (n) {
+        // 随机选取一个元素
+        i = Math.floor(Math.random() * array.length);
+        i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="再理解对象，函数&&要求的解读">
-<meta property="og:url" content="http://www.maiff.ren/2016/02/26/再理解对象，函数-要求的解读/index.html">
+<meta property="og:title" content="每日算法-随机打乱数组元素">
+<meta property="og:url" content="http://www.maiff.ren/2016/03/05/每日算法-随机打乱数组元素/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="this的理解今天在群里看到有个同学发了一个面试题
-var x = 2;
-var obj = {
-x:1,
-bar:{
-foo:function(){
-return this.x;
-}
-}
-}
-var go = obj.bar.foo;
-console.log(go()) //输出什么？
-console.log(obj.bar.foo()) //输出什么？
-按照我的理解我认为这两个this所代表的">
-<meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/css.jpg">
-<meta property="og:updated_time" content="2016-02-26T16:54:04.302Z">
+<meta property="og:description" content="方法一function shuffle(array) {
+     var copy=[],
+        n = array.length,
+        i;
+    // 如果还剩有元素。。
+    while (n) {
+        // 随机选取一个元素
+        i = Math.floor(Math.random() * array.length);
+        i">
+<meta property="og:updated_time" content="2016-03-05T03:17:34.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="再理解对象，函数&&要求的解读">
-<meta name="twitter:description" content="this的理解今天在群里看到有个同学发了一个面试题
-var x = 2;
-var obj = {
-x:1,
-bar:{
-foo:function(){
-return this.x;
-}
-}
-}
-var go = obj.bar.foo;
-console.log(go()) //输出什么？
-console.log(obj.bar.foo()) //输出什么？
-按照我的理解我认为这两个this所代表的">
+<meta name="twitter:title" content="每日算法-随机打乱数组元素">
+<meta name="twitter:description" content="方法一function shuffle(array) {
+     var copy=[],
+        n = array.length,
+        i;
+    // 如果还剩有元素。。
+    while (n) {
+        // 随机选取一个元素
+        i = Math.floor(Math.random() * array.length);
+        i">
 
 
 
@@ -124,7 +108,7 @@ console.log(obj.bar.foo()) //输出什么？
   };
 </script>
 
-  <title> 再理解对象，函数&&要求的解读 | Maiff </title>
+  <title> 每日算法-随机打乱数组元素 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -244,7 +228,7 @@ console.log(obj.bar.foo()) //输出什么？
             
             
               
-                再理解对象，函数&&要求的解读
+                每日算法-随机打乱数组元素
               
             
           </h1>
@@ -256,8 +240,8 @@ console.log(obj.bar.foo()) //输出什么？
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-26T20:54:31+08:00" content="2016-02-26">
-              2016-02-26
+            <time itemprop="dateCreated" datetime="2016-03-05T11:09:33+08:00" content="2016-03-05">
+              2016-03-05
             </time>
           </span>
 
@@ -270,8 +254,8 @@ console.log(obj.bar.foo()) //输出什么？
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS的世界/" itemprop="url" rel="index">
-                    <span itemprop="name">JS的世界</span>
+                  <a href="/categories/每日算法/" itemprop="url" rel="index">
+                    <span itemprop="name">每日算法</span>
                   </a>
                 </span>
 
@@ -286,8 +270,8 @@ console.log(obj.bar.foo()) //输出什么？
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/26/再理解对象，函数-要求的解读/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/再理解对象，函数-要求的解读/" itemprop="commentsCount"></span>
+                <a href="/2016/03/05/每日算法-随机打乱数组元素/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/05/每日算法-随机打乱数组元素/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -308,93 +292,39 @@ console.log(obj.bar.foo()) //输出什么？
       
 
       
-        <h2 id="this的理解"><a href="#this的理解" class="headerlink" title="this的理解"></a>this的理解</h2><p>今天在群里看到有个同学发了一个面试题</p>
-<pre><code>var x = 2;
-var obj = {
-x:1,
-bar:{
-foo:function(){
-return this.x;
-}
-}
-}
-var go = obj.bar.foo;
-console.log(go()) //输出什么？
-console.log(obj.bar.foo()) //输出什么？
-</code></pre><p>按照我的理解我认为这两个this所代表的对象都代表window，可是真正的答案是第一个输出2，第二个是undefined，于是我开始查对<a href="http://foocoder.com/blog/xiang-jie-javascriptzhong-de-this.html/" target="_blank" rel="external">this的理解</a>.然后发现一个大问题，我对对象，函数，和构造函数的理解 有很大的误区。比如这个。</p>
-<pre><code>function fooCoder(x) {
-    this.x = x;
-}
-fooCoder(2);
-alert(x);// 全局变量x值为2
-</code></pre><p>这句代码是为了让我们理解this的，可是我发现一个问题，如果这个<code>fooCoder</code>作为构造函数，于是我就写了下面的代码：</p>
-<pre><code>function fooCoder(x) {
-    this.x = x;
-}
-var test=new fooCoder(2);
-alert(test.x);// test中x属性值为2
-</code></pre><p>于是我就对这个new有疑问，到底干了什么？</p>
-<blockquote>
-<p>　new操作符会让构造函数产生如下变化：<br>　1.       创建一个新对象；<br>　2.       将构造函数的作用域赋给新对象（因此this就指向了这个新对象<br>　3.       执行构造函数中的代码（为这个新对象添加属性）；<br>　4.       返回新对象</p>
-</blockquote>
-<p>相关链接<br><a href="https://www.google.com.hk/webhp?hl=zh-CN#safe=strict&amp;hl=zh-CN&amp;q=js+new%E8%BF%87%E7%A8%8B" target="_blank" rel="external">JS中new的过程</a><br>这样我就理解了，开始this是window，由于new改变了作用域，所以this指向就不一样了。<br>还有函数中一般都不用json键值对，一直我有误解，看来我还要多多打基础。</p>
-<h2 id="近期面试所问的问题的深度理解"><a href="#近期面试所问的问题的深度理解" class="headerlink" title="近期面试所问的问题的深度理解"></a>近期面试所问的问题的深度理解</h2><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>闭包是老问题<br><a href="http://www.cnblogs.com/xxcanghai/p/4991870.html" target="_blank" rel="external">链接</a></p>
-<h3 id="快排和去重"><a href="#快排和去重" class="headerlink" title="快排和去重"></a>快排和去重</h3><p>快排思想：找一个比较的一般是第一个，循环所有元素大的放右边小的放左边，然后递归。详见<a href="http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html" target="_blank" rel="external">阮一峰老师的快排</a><br>代码如下:</p>
-<pre><code>function quickSort(arr){
-    if(arr.length&lt;=1)return arr;
-    var keyNum=Math.floor(arr.length/2);
-    var key=arr.splice(keyNum,1)[0];
-    var i=0,len=arr.length;
-    var right=[],left=[];
-    for(i;i&lt;len;i++){
-        if(arr[i]&lt;key)left.push(arr[i]);
-        else right.push(arr[i]);
-    }
-    return quickSort(left).concat([key],quickSort(right));
-}
-</code></pre><p>去重有三个方法</p>
-<ul>
-<li>新建个数组，与目标数组对比没有就放进去<br>  function unique(arr){<pre><code>var newArr=[];
-for(var i=0;i&lt;arr.length;i++){
-    if(newArr.indexOf(array[i])==-1)newArr.push(arr[i]);
-}
-</code></pre>  }</li>
-<li>排序后，在对比，缺点去重后也是排序好的，效率高一点<br>  function unique(arr){<pre><code>arr.sort();
-var newArr=[];
-for(var i=0;i&lt;arr.length;i++){
-    if(arr[i]!=newArr[length-1])
-    newArr.push(arr[i]);
-}
-</code></pre>  }</li>
-<li>引用一个新对象 <pre><code>function unique(arr){
-    var newObj={};
-    var newArr=[];
-    for(var i=0;i&lt;arr.length;i++){
-        if(!newObj[arr[i]]){
-        newArr.push(arr[i]);
-        newObj[arr[i]]=1;
+        <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><pre><code>function shuffle(array) {
+     var copy=[],
+        n = array.length,
+        i;
+    // 如果还剩有元素。。
+    while (n) {
+        // 随机选取一个元素
+        i = Math.floor(Math.random() * array.length);
+        if(i in array){
+            copy.push(array[i]);
+            delete array[i];
+            n--;
         }
     }
-    return newArr;
-}
-</code></pre></li>
-</ul>
-<h3 id="css实现垂直居中"><a href="#css实现垂直居中" class="headerlink" title="css实现垂直居中"></a>css实现垂直居中</h3><p>个人比较看好两个方法<br>css代码：</p>
-<pre><code>html,body {height: 100%;}
-#floater{
-           float:left;
-           background: green;
-           height:50%;/*相对于父元素高度的50%*/
-           transform: translate(-50%, -50%);/*值大小为居中元素高度的一半（240px/2）*/
-       }
-#content {
-           clear:both;/*清除浮动*/
-           height: 240px;
-           position: relative;
-           background: red;
-       }
-</code></pre><p>Html代码：<img src="http://7xpser.com1.z0.glb.clouddn.com/css.jpg" alt="html代码"></p>
-<p>或者用绝对定位不用加额外标签。<br>详见<a href="http://www.w3cplus.com/css/vertically-center-content-with-css" target="_blank" rel="external">css实现垂直居中</a></p>
+    return copy;
+}//我认为效率不高
+</code></pre><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><pre><code>function shuffle(array) {
+     var copy=[],
+        n = array.length,
+        i;
+    // 如果还剩有元素。。
+    while (n) {
+        // 随机选取一个元素
+        i = Math.floor(Math.random() * n--);
+            copy.push(array.splice(i,1)[0]);     
+            //n--;   
+    }
+    return copy;
+}//还可以
+</code></pre><h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><p>function shuffle(array) {<br>     var temp,<br>        n = array.length,<br>        i;<br>    // 如果还剩有元素。。<br>    while (n) {<br>        // 随机选取一个元素<br>        i = Math.floor(Math.random() * n–);<br>            t=array[i];<br>            array[i]=array[n];<br>            array[n]=t;</p>
+<pre><code>}
+return array;
+</code></pre><p>}</p>
 
       
     </div>
@@ -406,17 +336,13 @@ for(var i=0;i&lt;arr.length;i++){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/25/Hexo博客搭建之路/" rel="next" title="Hexo博客搭建之路">
-                <i class="fa fa-chevron-left"></i> Hexo博客搭建之路
+              <a href="/2016/03/04/head头标签/" rel="next" title="head头标签">
+                <i class="fa fa-chevron-left"></i> head头标签
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/29/每日一练收获与月报的收获/" rel="prev" title="每日一练收获与月报的收获">
-                每日一练收获与月报的收获 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -441,8 +367,8 @@ for(var i=0;i&lt;arr.length;i++){
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/26/再理解对象，函数-要求的解读/"
-           data-title="再理解对象，函数&&要求的解读" data-url="http://www.maiff.ren/2016/02/26/再理解对象，函数-要求的解读/">
+      <div class="ds-thread" data-thread-key="2016/03/05/每日算法-随机打乱数组元素/"
+           data-title="每日算法-随机打乱数组元素" data-url="http://www.maiff.ren/2016/03/05/每日算法-随机打乱数组元素/">
       </div>
     
   </div>
@@ -556,7 +482,7 @@ for(var i=0;i&lt;arr.length;i++){
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this的理解"><span class="nav-number">1.</span> <span class="nav-text">this的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#近期面试所问的问题的深度理解"><span class="nav-number">2.</span> <span class="nav-text">近期面试所问的问题的深度理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">2.1.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快排和去重"><span class="nav-number">2.2.</span> <span class="nav-text">快排和去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css实现垂直居中"><span class="nav-number">2.3.</span> <span class="nav-text">css实现垂直居中</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一"><span class="nav-number">1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二"><span class="nav-number">2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三"><span class="nav-number">3.</span> <span class="nav-text">方法三</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
