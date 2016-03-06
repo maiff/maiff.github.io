@@ -57,16 +57,67 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta name="description" content="自定义滚动条先上demo
+感觉还可以。先说说优点吧：
+
+改变了代码思路，有了面向对象的思想。
+封装了一些方法。
+
+那缺点了？
+
+代码肯定有改善的地方，可以用闭包，减少全局变量。
+架构的改变
+可以加几个方法改变滚动条的样式
+
+遇到的问题和学到的知识
+
+mousewheel和DOMMouseScroll的区别和兼容性
+怎么调用原型方法
+溢出（查了一大堆Stack Overflow最有用）
+滚动条的实现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自定义滚动条">
 <meta property="og:url" content="http://www.maiff.ren/2016/03/06/自定义滚动条/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
-<meta property="og:updated_time" content="2016-03-06T14:32:27.020Z">
+<meta property="og:description" content="自定义滚动条先上demo
+感觉还可以。先说说优点吧：
+
+改变了代码思路，有了面向对象的思想。
+封装了一些方法。
+
+那缺点了？
+
+代码肯定有改善的地方，可以用闭包，减少全局变量。
+架构的改变
+可以加几个方法改变滚动条的样式
+
+遇到的问题和学到的知识
+
+mousewheel和DOMMouseScroll的区别和兼容性
+怎么调用原型方法
+溢出（查了一大堆Stack Overflow最有用）
+滚动条的实现">
+<meta property="og:updated_time" content="2016-03-06T14:57:14.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义滚动条">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:description" content="自定义滚动条先上demo
+感觉还可以。先说说优点吧：
+
+改变了代码思路，有了面向对象的思想。
+封装了一些方法。
+
+那缺点了？
+
+代码肯定有改善的地方，可以用闭包，减少全局变量。
+架构的改变
+可以加几个方法改变滚动条的样式
+
+遇到的问题和学到的知识
+
+mousewheel和DOMMouseScroll的区别和兼容性
+怎么调用原型方法
+溢出（查了一大堆Stack Overflow最有用）
+滚动条的实现">
 
 
 
@@ -222,6 +273,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术应用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术应用</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -249,7 +319,242 @@
       
 
       
-        
+        <h2 id="自定义滚动条"><a href="#自定义滚动条" class="headerlink" title="自定义滚动条"></a>自定义滚动条</h2><p>先上<a href="https://jsbin.com/peraxoxiqa/1/edit" target="_blank" rel="external">demo</a></p>
+<p>感觉还可以。先说说优点吧：</p>
+<ul>
+<li>改变了代码思路，有了面向对象的思想。</li>
+<li>封装了一些方法。</li>
+</ul>
+<p>那缺点了？</p>
+<ul>
+<li>代码肯定有改善的地方，可以用闭包，减少全局变量。</li>
+<li>架构的改变</li>
+<li>可以加几个方法改变滚动条的样式</li>
+</ul>
+<p>遇到的问题和学到的知识</p>
+<ul>
+<li>mousewheel和DOMMouseScroll的区别和兼容性</li>
+<li>怎么调用原型方法</li>
+<li>溢出（查了一大堆Stack Overflow最有用）</li>
+<li>滚动条的实现思路</li>
+<li>实现opp的一大堆问题</li>
+</ul>
+<p>源代码<br>HTML:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;自定义样式滑块&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .main{
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+    .main2{
+        position: absolute;
+        left: 80%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+    .content-wrap2{
+
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        height: inherit;
+        width: inherit;
+    }
+    .content-wrap{
+
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        height: inherit;
+        width: inherit;
+    }
+    .content{
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+    }
+    .content2{
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+    }
+
+    .slider-contain{/*滑条样式*/
+        position: absolute;
+        left: 100%;
+        top:0;
+        width: 10px;
+        height:inherit;
+        background: #ccc;
+        border-radius:5px; 
+    }
+    .bar{/*滑块样式*/
+        position: absolute;
+        top: 0;
+        left:-15%;
+        width: 13px;
+        border-radius: 6px;
+        background: #999; 
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;main&quot;&gt;
+    &lt;div class=&quot;content-wrap&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, &lt;/p&gt;
+            &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+            &lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;/p&gt;
+            &lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+            &lt;p&gt;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;/p&gt;
+            &lt;p&gt;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;/p&gt;
+            &lt;p&gt;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, &lt;/p&gt;
+            &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+            &lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;/p&gt;
+            &lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+                &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+            &lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;/p&gt;
+            &lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+            &lt;p&gt;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+                &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+
+            &lt;p&gt;end&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;main2&quot;&gt;
+    &lt;div class=&quot;content-wrap2&quot;&gt;
+        &lt;div class=&quot;content2&quot;&gt;
+
+            &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+            &lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;/p&gt;
+            &lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+                &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+            &lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;/p&gt;
+            &lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+            &lt;p&gt;proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+                &lt;p&gt;consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+
+            &lt;p&gt;end&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;renderBar.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var test=new Bar(&apos;.main&apos;,&apos;.content&apos;,&apos;.content-wrap&apos;);
+var test2=new Bar(&apos;.main2&apos;,&apos;.content2&apos;,&apos;.content-wrap2&apos;);
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre><p>JS:</p>
+<pre><code>function Bar(target1,content2,warp3){
+    var target=this.bar_tool.$(target1),content=this.bar_tool.$(content2),oWarp=this.bar_tool.$(warp3)
+    var mousewheel =this.bar_tool.isFirefox()? &quot;DOMMouseScroll&quot; : &quot;mousewheel&quot;;
+    var bar=this.render(target),oParent=bar.parentNode;
+    this.setBarHeight(content.offsetHeight-oWarp.offsetHeight,bar,oParent);
+    var setTop=this.setTop;
+    this.mouseWheel=function(ev){
+        var oEv = ev || event;
+          bDown = oEv.wheelDelta ? oEv.wheelDelta &lt; 0 : oEv.detail &gt; 0;
+           if(bDown){
+               setTop(bar.offsetTop + 10,oParent,content,oWarp,bar);
+          }else{
+    // setLeft(oBox.offsetLeft - 10);
+            setTop(bar.offsetTop - 10,oParent,content,oWarp,bar);
+              }
+          if(oEv.preventDefault){
+            oEv.preventDefault();
+          }
+          return false;
+    };
+    bar.onmousedown=function(ev){
+        var e=ev||event;
+        var disY=e.clientY-bar.offsetTop;
+        document.onmousemove=function(ev){
+            var e=ev||event;
+            var l=e.clientY-disY;
+            setTop(l,oParent,content,oWarp,bar);
+        }
+        document.onmouseup=function(){
+            document.onmouseup=null;
+            document.onmousemove=null;
+        }
+        return false;
+    };    
+
+        this.bar_tool.addEvent(oWarp,mousewheel,this.mouseWheel);
+        this.bar_tool.addEvent(oParent,mousewheel,this.mouseWheel);
+}
+
+Bar.prototype={
+    render:function(target){
+
+        var slider_contain=document.createElement(&apos;div&apos;);
+        var bar=document.createElement(&apos;div&apos;);
+        bar.className=&apos;bar&apos;;
+        //slider_contain.innerHTML=&quot;&lt;div class=&apos;bar&apos;&gt;&lt;/div&gt;&quot;;
+        slider_contain.className=&apos;slider-contain&apos;;
+        slider_contain.appendChild(bar);
+        target.appendChild(slider_contain);
+        return bar;
+    },
+    setTop:function(l,oParent,content,oWarp,bar){
+
+        if(l&lt;0)l=0;
+        else if(l&gt;oParent.offsetHeight-bar.offsetHeight){
+            l=oParent.offsetHeight-bar.offsetHeight;
+        }
+        bar.style.top=l+&apos;px&apos;;
+        var n=l/(oParent.offsetHeight-bar.offsetHeight);
+        content.style.top =- (content.offsetHeight - oWarp.offsetHeight)*n + &apos;px&apos;;
+    },
+    setBarHeight:function(h,bar,oParent){
+        var barHeight=oParent.offsetHeight-h;
+          bar.style.height = barHeight &lt; 30 ? &apos;30px&apos; : barHeight + &apos;px&apos;;
+},
+    bar_tool:{
+    isFirefox:function (){
+        return navigator.userAgent.toLowerCase().match(/firefox\/([\d.]+)/)?true:false;
+    },
+        addEvent:function(obj,sEv,fn){
+            if(obj.addEventListener){
+            obj.addEventListener(sEv,fn,false);
+            }
+            else obj.attachEvent(&apos;on&apos;+sEv,fn);
+        },
+        $:function(id){
+            return document.querySelector(id);
+        }
+    }
+}
+</code></pre>
       
     </div>
 
@@ -406,7 +711,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义滚动条"><span class="nav-number">1.</span> <span class="nav-text">自定义滚动条</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
