@@ -57,52 +57,16 @@
 
 
 
-<meta name="description" content="关于js基础的复习
-数组本身是对象，所以用typeof一个数组返回的是object。
-数组中只有非负数字是索引
-a[-1.23]=true//这将创建个对象
-a[1.00]等价于a[1]
-
-
-js中不会有越界，只会报undefined
-var a[,,,]其中只有两个元素
-删除尾部元素可以直接减少索引
-遍历对象元素
- var values=[];
- var keys =Object.keys(o)">
+<meta name="description" content="学习总结 思考感悟 知识管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于js基础的复习">
-<meta property="og:url" content="http://www.maiff.ren/2016/01/17/2016.1.7/index.html">
+<meta property="og:title" content="自定义滚动条">
+<meta property="og:url" content="http://www.maiff.ren/2016/03/06/自定义滚动条/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="关于js基础的复习
-数组本身是对象，所以用typeof一个数组返回的是object。
-数组中只有非负数字是索引
-a[-1.23]=true//这将创建个对象
-a[1.00]等价于a[1]
-
-
-js中不会有越界，只会报undefined
-var a[,,,]其中只有两个元素
-删除尾部元素可以直接减少索引
-遍历对象元素
- var values=[];
- var keys =Object.keys(o)">
-<meta property="og:updated_time" content="2016-02-25T08:12:28.703Z">
+<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:updated_time" content="2016-03-06T14:32:27.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于js基础的复习">
-<meta name="twitter:description" content="关于js基础的复习
-数组本身是对象，所以用typeof一个数组返回的是object。
-数组中只有非负数字是索引
-a[-1.23]=true//这将创建个对象
-a[1.00]等价于a[1]
-
-
-js中不会有越界，只会报undefined
-var a[,,,]其中只有两个元素
-删除尾部元素可以直接减少索引
-遍历对象元素
- var values=[];
- var keys =Object.keys(o)">
+<meta name="twitter:title" content="自定义滚动条">
+<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
 
 
 
@@ -120,7 +84,7 @@ var a[,,,]其中只有两个元素
   };
 </script>
 
-  <title> 关于js基础的复习 | Maiff </title>
+  <title> 自定义滚动条 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +204,7 @@ var a[,,,]其中只有两个元素
             
             
               
-                关于js基础的复习
+                自定义滚动条
               
             
           </h1>
@@ -252,38 +216,19 @@ var a[,,,]其中只有两个元素
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-17T11:53:12+08:00" content="2016-01-17">
-              2016-01-17
+            <time itemprop="dateCreated" datetime="2016-03-06T22:32:26+08:00" content="2016-03-06">
+              2016-03-06
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS的世界/" itemprop="url" rel="index">
-                    <span itemprop="name">JS的世界</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/17/2016.1.7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/17/2016.1.7/" itemprop="commentsCount"></span>
+                <a href="/2016/03/06/自定义滚动条/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/06/自定义滚动条/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -304,69 +249,7 @@ var a[,,,]其中只有两个元素
       
 
       
-        <h2 id="关于js基础的复习"><a href="#关于js基础的复习" class="headerlink" title="关于js基础的复习"></a>关于js基础的复习</h2><ul>
-<li>数组本身是对象，所以用typeof一个数组返回的是object。</li>
-<li>数组中只有非负数字是索引<ol>
-<li><code>a[-1.23]=true//这将创建个对象</code></li>
-<li>a[1.00]等价于a[1]</li>
-</ol>
-</li>
-<li>js中不会有越界，只会报undefined</li>
-<li>var a[,,,]其中只有两个元素</li>
-<li>删除尾部元素可以直接减少索引</li>
-<li><p>遍历对象元素</p>
-<pre><code> var values=[];
- var keys =Object.keys(o);
- for(var i=0,len=keys.length;i&lt;len;i++){
- var key=keys[i];
- values[i]=o[key];
-}
-</code></pre></li>
-<li><p>数组方法</p>
-<ul>
-<li>push()//向末尾插入元素</li>
-<li>pop()//删除末尾元素并返回</li>
-<li>unshift()//向首部插入元素</li>
-<li>shift()//删除首部元素并返回</li>
-<li>join()//p152  split()//刚好相反</li>
-<li>reverse()</li>
-<li>sort()</li>
-<li>splice</li>
-<li>toString()</li>
-<li>toLocalString()</li>
-<li>forEach(Fn)</li>
-<li>map(),every(),some(),filter()//p157</li>
-<li>reduce(),reduceRight()</li>
-<li>p157多维数组</li>
-<li>indexOf()和lastIndexOf()//p160</li>
-</ul>
-</li>
-</ul>
-<p>PS.call方法的应用，类数组的使用</p>
-<hr>
-<h3 id="关于字符串"><a href="#关于字符串" class="headerlink" title="关于字符串"></a>关于字符串</h3><p><strong>由于字符串是不可更改的，所以有些数组的方法是不能用的P164</strong><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="external">关于字符串的用法</a><br><a href="http://www.w3school.com.cn/jsref/jsref_obj_string.asp" target="_blank" rel="external">字符串的方法</a></p>
-<p>PS.</p>
-<ul>
-<li><a href="http://www.cnblogs.com/jenry/archive/2010/12/08/1900150.html" target="_blank" rel="external">hasOwnproperty</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_math.asp" target="_blank" rel="external">js中math</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank" rel="external">typeof</a></li>
-<li><p>深度克隆</p>
-<pre><code>function cloneObject(src){
-var newsrc;
-if(isArray(src)||(typeof src==&quot;object&quot;)){
-newsrc=(isArray(src))?[]:{};
-for(var i in src){
-    newsrc[i]=cloneObject(src[i]);
-}
-}
-else{
-newsrc=src;
-}
-return newsrc;
-}
-</code></pre></li>
-</ul>
-<h3 id="关于正则"><a href="#关于正则" class="headerlink" title="关于正则"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="external">关于正则</a></h3>
+        
       
     </div>
 
@@ -377,17 +260,13 @@ return newsrc;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/2016.1.17/" rel="next" title="犀牛书总结（1）">
-                <i class="fa fa-chevron-left"></i> 犀牛书总结（1）
+              <a href="/2016/03/05/每日收获/" rel="next" title="每日收获--querySelector和onmousewheel等的理解">
+                <i class="fa fa-chevron-left"></i> 每日收获--querySelector和onmousewheel等的理解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/19/2016.1.19/" rel="prev" title="犀牛书总结（2）">
-                犀牛书总结（2） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,8 +291,8 @@ return newsrc;
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/17/2016.1.7/"
-           data-title="关于js基础的复习" data-url="http://www.maiff.ren/2016/01/17/2016.1.7/">
+      <div class="ds-thread" data-thread-key="2016/03/06/自定义滚动条/"
+           data-title="自定义滚动条" data-url="http://www.maiff.ren/2016/03/06/自定义滚动条/">
       </div>
     
   </div>
@@ -527,7 +406,7 @@ return newsrc;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于js基础的复习"><span class="nav-number">1.</span> <span class="nav-text">关于js基础的复习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于字符串"><span class="nav-number">1.1.</span> <span class="nav-text">关于字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于正则"><span class="nav-number">1.2.</span> <span class="nav-text">关于正则</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
