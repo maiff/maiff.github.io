@@ -57,15 +57,67 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	自定义样式滑块
+	
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.main{
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 300px;
+		height: 500px;
+		border: 1p">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Maiff">
-<meta property="og:url" content="http://www.maiff.ren/categories/node的飞行/index.html">
+<meta property="og:url" content="http://www.maiff.ren/demo/slider/自定义样式滑动块.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	自定义样式滑块
+	
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.main{
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 300px;
+		height: 500px;
+		border: 1p">
+<meta property="og:updated_time" content="2016-03-06T14:08:18.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maiff">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	自定义样式滑块
+	
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.main{
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 300px;
+		height: 500px;
+		border: 1p">
 
 
 
@@ -83,7 +135,13 @@
   };
 </script>
 
-  <title> 分类: node的飞行 | Maiff </title>
+  <title>
+  
+
+  
+     | Maiff
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,53 +240,225 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        node的飞行
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/01/12/2016.1.12/" itemprop="url">
-              
-                <span itemprop="name">node初探---爬虫</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-01-12T11:53:12+08:00"
-              content="2016-01-12" >
-          01-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
     
-  </section>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义样式滑块</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.main{
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 300px;
+		height: 500px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		
+	}
+	.main2{
+		position: absolute;
+		left: 80%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 300px;
+		height: 500px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		
+	}
+	.content-wrap2{
+		
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		height: inherit;
+		width: inherit;
+	}
+	.content-wrap{
+		
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		height: inherit;
+		width: inherit;
+	}
+	.content{
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+	}
+	.content2{
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+	}
 
-  
+	.slider-contain{/*滑条样式*/
+		position: absolute;
+		left: 100%;
+		top:0;
+		width: 10px;
+		height:inherit;
+		background: #ccc;
+		border-radius:5px; 
+	}
+	.bar{/*滑块样式*/
+		position: absolute;
+		top: 0;
+		left:-15%;
+		width: 13px;
+		border-radius: 6px;
+		background: #999; 
+	}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="content-wrap">
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, </p>
+			<p>consectetur adipisicing elit, sed do eiusmod</p>
+			<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+			<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+			<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+			<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+			<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, </p>
+			<p>consectetur adipisicing elit, sed do eiusmod</p>
+			<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+			<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+				<p>consectetur adipisicing elit, sed do eiusmod</p>
+			<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+			<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+			<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+				<p>consectetur adipisicing elit, sed do eiusmod</p>
+			
+			<p>end</p>
+		</div>
+	</div>
+	
+</div>
+<div class="main2">
+	<div class="content-wrap2">
+		<div class="content2">
+			
+			<p>consectetur adipisicing elit, sed do eiusmod</p>
+			<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+			<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+				<p>consectetur adipisicing elit, sed do eiusmod</p>
+			<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+			<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+			<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+				<p>consectetur adipisicing elit, sed do eiusmod</p>
+			
+			<p>end</p>
+		</div>
+	</div>
+	
+</div>
 
+	
+</body>
+<script type="text/javascript" src="renderBar.js"></script>
+<script type="text/javascript">
+	
+var test=new Bar('.main','.content','.content-wrap');
+var test2=new Bar('.main2','.content2','.content-wrap2');
+
+// 	var test=new Bar();
+// 	test.render(document.querySelector('.main'));
+// 	var bar=document.querySelector('.bar');
+// 	var oParent=document.querySelector('.slider-contain');
+// 	var oWarp=document.querySelector('.content-wrap');
+// 	var content=document.querySelector('.content');
+// 	var mousewheel = isFirefox() ? "DOMMouseScroll" : "mousewheel";
+	// function isFirefox(){
+	// 	return navigator.userAgent.toLowerCase().match(/firefox\/([\d.]+)/)?true:false;
+	// }
+// 	function addEvent(obj,sEv,fn){
+// 		if(obj.addEventListener){
+// 			obj.addEventListener(sEv,fn,false);
+// 		}
+// 		else obj.attachEvent('on'+sEv,fn);
+// 	}
+// 	function mouseWheel(ev){
+//  	 	var oEv = ev || event;
+//  	 	bDown = oEv.wheelDelta ? oEv.wheelDelta < 0 : oEv.detail > 0;
+//   	 	if(bDown){
+//    			setTop(bar.offsetTop + 10);
+//   		}else{
+//     // setLeft(oBox.offsetLeft - 10);
+//     		setTop(bar.offsetTop - 10);
+//  			 }
+//   		if(oEv.preventDefault){
+//     		oEv.preventDefault();
+//   		}
+//   		return false;
+// }
+
+	// bar.onmousedown=function(ev){
+	// 	var e=ev||event;
+	// 	var disY=e.clientY-bar.offsetTop;
+	// 	document.onmousemove=function(ev){
+	// 		var e=ev||event;
+	// 		var l=e.clientY-disY;
+	// 		setTop(l);
+	// 	}
+	// 	document.onmouseup=function(){
+	// 		document.onmouseup=null;
+	// 		document.onmousemove=null;
+	// 	}
+	// 	return false;
+	// }
+// 	function setTop(l){
+// 		if(l<0)l=0;
+// 		else if(l>oParent.offsetHeight-bar.offsetHeight){
+// 			l=oParent.offsetHeight-bar.offsetHeight;
+// 		}
+// 		bar.style.top=l+'px';
+// 		var n=l/(oParent.offsetHeight-bar.offsetHeight);
+// 		content.style.top =- (content.offsetHeight - oWarp.offsetHeight)*n + 'px';
+
+// 	}
+// 	function setBarHeight(h){
+// 		var barHeight=oParent.offsetHeight-h;
+//   		bar.style.height = barHeight < 30 ? '30px' : barHeight + 'px';
+// }
+// setBarHeight(content.offsetHeight-oWarp.offsetHeight);
+// addEvent(oParent, mousewheel, mouseWheel);
+// addEvent(oWarp, mousewheel, mouseWheel);
+
+
+
+</script>
+</html>
+    
+  </div>
 
 
           </div>
           ﻿
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="demo/slider/自定义样式滑动块.html"
+           data-title="" data-url="http://www.maiff.ren/demo/slider/自定义样式滑动块.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
