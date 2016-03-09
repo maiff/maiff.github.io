@@ -57,40 +57,52 @@
 
 
 
-<meta name="description" content="mini-query的实现下列是要求
+<meta name="description" content="实在无法找到一个好的放demo的平台。直接放源码吧。
+更改的地方：
+把大部分的函数放到原型链上。
 
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过tagName获取DOM对象，例如
-// 可以通过样式名称获取DOM对象，例如
-// 可以通过attribute匹配获取DOM对象，例如
-/ 返回第一个包含属性data-time且值为2015的对象
-可以通过简单的组合提高查询便利性，例如">
+得到收获：
+我发现实践跟学习没法比，理解可以得到很大的升华，但是前提是有很好的基础。
+对什么样的属性或者函数该放在原型链上，还是作为本身的属性或者函数有更深的理解。
+对this的指向有更深的理解，可以通过闭包来解决问题。
+
+存在问题：
+我不知道好的代码应该是什么样的。
+看不懂别人那样写的意图。
+全局">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mini-query的实现">
-<meta property="og:url" content="http://www.maiff.ren/2016/01/08/2016.1.8/index.html">
+<meta property="og:title" content="自定义滚动条的重构">
+<meta property="og:url" content="http://www.maiff.ren/2016/03/09/自定义滚动条的重构/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="mini-query的实现下列是要求
+<meta property="og:description" content="实在无法找到一个好的放demo的平台。直接放源码吧。
+更改的地方：
+把大部分的函数放到原型链上。
 
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过tagName获取DOM对象，例如
-// 可以通过样式名称获取DOM对象，例如
-// 可以通过attribute匹配获取DOM对象，例如
-/ 返回第一个包含属性data-time且值为2015的对象
-可以通过简单的组合提高查询便利性，例如">
-<meta property="og:updated_time" content="2016-02-25T08:12:27.828Z">
+得到收获：
+我发现实践跟学习没法比，理解可以得到很大的升华，但是前提是有很好的基础。
+对什么样的属性或者函数该放在原型链上，还是作为本身的属性或者函数有更深的理解。
+对this的指向有更深的理解，可以通过闭包来解决问题。
+
+存在问题：
+我不知道好的代码应该是什么样的。
+看不懂别人那样写的意图。
+全局">
+<meta property="og:updated_time" content="2016-03-09T14:25:58.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mini-query的实现">
-<meta name="twitter:description" content="mini-query的实现下列是要求
+<meta name="twitter:title" content="自定义滚动条的重构">
+<meta name="twitter:description" content="实在无法找到一个好的放demo的平台。直接放源码吧。
+更改的地方：
+把大部分的函数放到原型链上。
 
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过id获取DOM对象，通过#标示，例如
-// 可以通过tagName获取DOM对象，例如
-// 可以通过样式名称获取DOM对象，例如
-// 可以通过attribute匹配获取DOM对象，例如
-/ 返回第一个包含属性data-time且值为2015的对象
-可以通过简单的组合提高查询便利性，例如">
+得到收获：
+我发现实践跟学习没法比，理解可以得到很大的升华，但是前提是有很好的基础。
+对什么样的属性或者函数该放在原型链上，还是作为本身的属性或者函数有更深的理解。
+对this的指向有更深的理解，可以通过闭包来解决问题。
+
+存在问题：
+我不知道好的代码应该是什么样的。
+看不懂别人那样写的意图。
+全局">
 
 
 
@@ -108,7 +120,7 @@
   };
 </script>
 
-  <title> mini-query的实现 | Maiff </title>
+  <title> 自定义滚动条的重构 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -228,7 +240,7 @@
             
             
               
-                mini-query的实现
+                自定义滚动条的重构
               
             
           </h1>
@@ -240,8 +252,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-08T11:53:12+08:00" content="2016-01-08">
-              2016-01-08
+            <time itemprop="dateCreated" datetime="2016-03-09T22:11:21+08:00" content="2016-03-09">
+              2016-03-09
             </time>
           </span>
 
@@ -254,8 +266,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JS的世界/" itemprop="url" rel="index">
-                    <span itemprop="name">JS的世界</span>
+                  <a href="/categories/技术应用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术应用</span>
                   </a>
                 </span>
 
@@ -270,8 +282,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/08/2016.1.8/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/08/2016.1.8/" itemprop="commentsCount"></span>
+                <a href="/2016/03/09/自定义滚动条的重构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/自定义滚动条的重构/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,111 +304,20 @@
       
 
       
-        <h2 id="mini-query的实现"><a href="#mini-query的实现" class="headerlink" title="mini-query的实现"></a>mini-query的实现</h2><p>下列是要求</p>
-<ul>
-<li>// 可以通过id获取DOM对象，通过#标示，例如</li>
-<li>// 可以通过id获取DOM对象，通过#标示，例如</li>
-<li>// 可以通过tagName获取DOM对象，例如</li>
-<li>// 可以通过样式名称获取DOM对象，例如</li>
-<li>// 可以通过attribute匹配获取DOM对象，例如</li>
-<li>/ 返回第一个包含属性data-time且值为2015的对象</li>
-<li>可以通过简单的组合提高查询便利性，例如</li>
-</ul>
-<pre><code>function getClass(Oparent,Oclassname){
-
-    var elems=Oparent.getElementsByTagName(&quot;*&quot;);
-    var result=[];
-    //var index;
-    for(var i=0;i&lt;elems.length;i++){
-        var getclassname=elems[i].className.split(&apos; &apos;);
-        //console.log(getclassname);
-        //index=i;
-        for(var j=0;j&lt;getclassname.length;j++){
-            if(getclassname[j]==Oclassname){
-                result.push(elems[i]);
-                //console.log(elems[i]);
-            }
-        }
-        //alert(getclassname);
-    }
-    //console.log(result[0]);
-    return result;
-}
-
-function getAttr(Oparent,attr){
-    var elems=Oparent.getElementsByTagName(&quot;*&quot;);
-    var result=[];
-    for(var i=0;i&lt;elems.length;i++){
-        if (elems[i].attributes.length &gt; 0) {
-            for(var j=0;j&lt;elems[i].attributes.length;j++){
-                if (elems[i].attributes[j].name == attr) {
-                    result.push(elems[i]);
-            }
-        }
-    }
-
-    }
-    return result;
-}
-function getAttrValue(Oparent,attr,value){
-    var elems=Oparent.getElementsByTagName(&quot;*&quot;);
-    var result=[];
-    for(var i=0;i&lt;elems.length;i++){
-        if (elems[i].attributes.length &gt; 0) {
-            for(var j=0;j&lt;elems[i].attributes.length;j++){
-                if (elems[i].attributes[j].name == attr) {
-                    if(elems[i].getAttribute(attr) == value)
-                    result.push(elems[i]);
-            }
-        }
-    }
-
-    }
-    return result;
-}
-function $(selector){
-    if(selector[0]==&apos;#&apos;&amp;&amp;selector.indexOf(&apos;.&apos;)==-1){
-        return document.getElementById(selector.replace(/^#/g,&apos;&apos;));
-    }
-    if(selector[0]==&apos;#&apos;&amp;&amp;selector.indexOf(&apos;.&apos;)!=-1){
-        var now_sele=selector.split(&apos; &apos;);
-        //console.log(now_sele[1].replace(/./,&apos;&apos;));
-        var parent=document.getElementById(now_sele[0].replace(/#/,&apos;&apos;));
-        return getClass(parent,now_sele[1].replace(/./,&apos;&apos;))[0];
-
-    }
-    if(selector[0]==&apos;.&apos;){
-        return getClass(document,selector.replace(/^./g,&apos;&apos;))[0];
-    }
-
-    if(selector[0]==&apos;[&apos;&amp;&amp;selector.indexOf(&quot;=&quot;)==-1){
-
-        console.log(selector.replace(/^\[|\]$/g,&apos;&apos;));
-        return getAttr(document,selector.replace(/^\[|\]$/g,&apos;&apos;))[0];
-    }
-
-    if(selector[0]==&apos;[&apos;&amp;&amp;selector.indexOf(&quot;=&quot;)!=-1){
-        var getstrings=selector.replace(/^\[|\]$/g,&apos;&apos;);
-        var attr=getstrings.split(&apos;=&apos;)[0];
-        var value=getstrings.split(&apos;=&apos;)[1];
-        return getAttrValue(document,attr,value)[0];
-    }
-    else{
-        return document.getElementsByTagName(selector)[0];
-    }    
-
-
-}
-</code></pre><p>其实实现起来不是很复杂，想好思路，加上最基础的字符串、数组的操作，加上正则微妙的组合就可以完成这个mini-query</p>
-<p><hr><br>下面来说说我遇到的问题吧</p>
-<ul>
-<li>正则不是很熟练</li>
-<li><strong>其次字符串是不可变的</strong></li>
-<li>调试代码问题，代码不可能一次调好，想到调试工具的重要性</li>
-<li>坚持下去。</li>
-</ul>
-<hr>
-<p> 随着成长我觉得我以前写的代码很有意思</p>
+        <p>实在无法找到一个好的放demo的平台。<br>直接放<a href="https://github.com/maiff/my-slider" target="_blank" rel="external">源码</a>吧。</p>
+<h3 id="更改的地方："><a href="#更改的地方：" class="headerlink" title="更改的地方："></a>更改的地方：</h3><ol>
+<li>把大部分的函数放到原型链上。</li>
+</ol>
+<h3 id="得到收获："><a href="#得到收获：" class="headerlink" title="得到收获："></a>得到收获：</h3><ol>
+<li>我发现实践跟学习没法比，理解可以得到很大的升华，但是前提是有很好的基础。</li>
+<li>对什么样的属性或者函数该放在原型链上，还是作为本身的属性或者函数有更深的理解。</li>
+<li>对this的指向有更深的理解，可以通过闭包来解决问题。</li>
+</ol>
+<h3 id="存在问题："><a href="#存在问题：" class="headerlink" title="存在问题："></a>存在问题：</h3><ol>
+<li>我不知道好的代码应该是什么样的。</li>
+<li>看不懂别人那样写的意图。</li>
+<li>全局变量的滥用。</li>
+</ol>
 
       
     </div>
@@ -408,13 +329,13 @@ function $(selector){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/07/今日收获CSSOM视图模式和js事件/" rel="next" title="今日收获CSSOM视图模式和js事件">
+                <i class="fa fa-chevron-left"></i> 今日收获CSSOM视图模式和js事件
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/09/2016.1.9（事件委托）/" rel="prev" title="事件委托">
-                事件委托 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -439,8 +360,8 @@ function $(selector){
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/08/2016.1.8/"
-           data-title="mini-query的实现" data-url="http://www.maiff.ren/2016/01/08/2016.1.8/">
+      <div class="ds-thread" data-thread-key="2016/03/09/自定义滚动条的重构/"
+           data-title="自定义滚动条的重构" data-url="http://www.maiff.ren/2016/03/09/自定义滚动条的重构/">
       </div>
     
   </div>
@@ -554,7 +475,7 @@ function $(selector){
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-query的实现"><span class="nav-number">1.</span> <span class="nav-text">mini-query的实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#更改的地方："><span class="nav-number">1.</span> <span class="nav-text">更改的地方：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#得到收获："><span class="nav-number">2.</span> <span class="nav-text">得到收获：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在问题："><span class="nav-number">3.</span> <span class="nav-text">存在问题：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
