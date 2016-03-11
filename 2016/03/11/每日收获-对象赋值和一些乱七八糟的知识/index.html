@@ -57,50 +57,49 @@
 
 
 
-<meta name="description" content="2016.1.4学习成果
-Grid、Flexbox布局
-双飞翼布局
-清除浮动
-BFC
-下个阶段的目标CSS3和html5的新特性
-
-
-
-伪类选择器：父元素&amp;gt;子元素:first-child
-图片变圆（我发现一个有意思的现象加padding时会改变）
-border-radius:50%">
+<meta name="description" content="对象的赋值var a={n:1};
+var b=a;
+a.x=a={n:2};
+console.log(a.x);//undefined
+console.log(b);//{n:1,x:{n:2}}
+再看以下代码
+var a={n:1};
+var b=a;
+a={n:2}
+console.log(a);//{n:2}
+console.log(b);//{n:1}
+也许你能对对象赋值有个更深的理解，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的布局模式和BFC还有些杂七杂八的小知识">
-<meta property="og:url" content="http://www.maiff.ren/2016/02/25/笔记/index.html">
+<meta property="og:title" content="每日收获---对象赋值和一些乱七八糟的知识">
+<meta property="og:url" content="http://www.maiff.ren/2016/03/11/每日收获-对象赋值和一些乱七八糟的知识/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="2016.1.4学习成果
-Grid、Flexbox布局
-双飞翼布局
-清除浮动
-BFC
-下个阶段的目标CSS3和html5的新特性
-
-
-
-伪类选择器：父元素&amp;gt;子元素:first-child
-图片变圆（我发现一个有意思的现象加padding时会改变）
-border-radius:50%">
-<meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/%E4%BA%A7%E7%94%9Fbfc.jpg">
-<meta property="og:updated_time" content="2016-02-25T08:16:45.493Z">
+<meta property="og:description" content="对象的赋值var a={n:1};
+var b=a;
+a.x=a={n:2};
+console.log(a.x);//undefined
+console.log(b);//{n:1,x:{n:2}}
+再看以下代码
+var a={n:1};
+var b=a;
+a={n:2}
+console.log(a);//{n:2}
+console.log(b);//{n:1}
+也许你能对对象赋值有个更深的理解，">
+<meta property="og:updated_time" content="2016-03-11T03:14:55.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的布局模式和BFC还有些杂七杂八的小知识">
-<meta name="twitter:description" content="2016.1.4学习成果
-Grid、Flexbox布局
-双飞翼布局
-清除浮动
-BFC
-下个阶段的目标CSS3和html5的新特性
-
-
-
-伪类选择器：父元素&amp;gt;子元素:first-child
-图片变圆（我发现一个有意思的现象加padding时会改变）
-border-radius:50%">
+<meta name="twitter:title" content="每日收获---对象赋值和一些乱七八糟的知识">
+<meta name="twitter:description" content="对象的赋值var a={n:1};
+var b=a;
+a.x=a={n:2};
+console.log(a.x);//undefined
+console.log(b);//{n:1,x:{n:2}}
+再看以下代码
+var a={n:1};
+var b=a;
+a={n:2}
+console.log(a);//{n:2}
+console.log(b);//{n:1}
+也许你能对对象赋值有个更深的理解，">
 
 
 
@@ -118,7 +117,7 @@ border-radius:50%">
   };
 </script>
 
-  <title> 新的布局模式和BFC还有些杂七杂八的小知识 | Maiff </title>
+  <title> 每日收获---对象赋值和一些乱七八糟的知识 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -238,7 +237,7 @@ border-radius:50%">
             
             
               
-                新的布局模式和BFC还有些杂七杂八的小知识
+                每日收获---对象赋值和一些乱七八糟的知识
               
             
           </h1>
@@ -250,8 +249,8 @@ border-radius:50%">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-25T11:53:12+08:00" content="2016-02-25">
-              2016-02-25
+            <time itemprop="dateCreated" datetime="2016-03-11T11:04:30+08:00" content="2016-03-11">
+              2016-03-11
             </time>
           </span>
 
@@ -264,8 +263,8 @@ border-radius:50%">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/杂/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/每日收获/" itemprop="url" rel="index">
+                    <span itemprop="name">每日收获</span>
                   </a>
                 </span>
 
@@ -280,8 +279,8 @@ border-radius:50%">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/25/笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/03/11/每日收获-对象赋值和一些乱七八糟的知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/每日收获-对象赋值和一些乱七八糟的知识/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -302,21 +301,19 @@ border-radius:50%">
       
 
       
-        <h2 id="2016-1-4学习成果"><a href="#2016-1-4学习成果" class="headerlink" title="2016.1.4学习成果"></a>2016.1.4学习成果</h2><ol>
-<li><strong>Grid</strong>、<strong>Flexbox</strong>布局</li>
-<li><a href="http://www.imooc.com/wenda/detail/254035" target="_blank" rel="external">双飞翼布局</a></li>
-<li><a href="http://www.iyunlu.com/demo/enclosing-float-and-clearing-float/index.html" target="_blank" rel="external">清除浮动</a></li>
-<li>BFC<img src="http://7xpser.com1.z0.glb.clouddn.com/%E4%BA%A7%E7%94%9Fbfc.jpg" alt="BFC"></li>
-<li>下个阶段的目标CSS3和html5的新特性</li>
-</ol>
-<hr>
-<ul>
-<li>伪类选择器：<br>父元素&gt;子元素:first-child</li>
-<li>图片变圆（我发现一个有意思的现象加padding时会改变）<blockquote>
-<p>border-radius:50%</p>
-</blockquote>
-</li>
-</ul>
+        <h3 id="对象的赋值"><a href="#对象的赋值" class="headerlink" title="对象的赋值"></a>对象的赋值</h3><pre><code>var a={n:1};
+var b=a;
+a.x=a={n:2};
+console.log(a.x);//undefined
+console.log(b);//{n:1,x:{n:2}}
+</code></pre><p>再看以下代码</p>
+<pre><code>var a={n:1};
+var b=a;
+a={n:2}
+console.log(a);//{n:2}
+console.log(b);//{n:1}
+</code></pre><p>也许你能对对象赋值有个更深的理解，在那里<code>b=a</code>，是把{n:1}的引用给b，然后再把a的附到别的对象上，这样a，b就已经没关系了。<br>那第一个代码，因为开始的<code>a.x</code>，这里的a已经确定是{n:1}，详见《JavaScript权威指南》，赋值表达式是从左到右的先确定每一个值再进行赋值。所以后来的a.x已经不是当年的a.x。</p>
+<h3 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h3><p>obj.length===+obj.length就是typeof obj.length ==’Number’</p>
 
       
     </div>
@@ -328,17 +325,13 @@ border-radius:50%">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/24/2016.2.24/" rel="next" title="一些杂七杂八的小知识">
-                <i class="fa fa-chevron-left"></i> 一些杂七杂八的小知识
+              <a href="/2016/03/09/自定义滚动条的重构/" rel="next" title="自定义滚动条的重构">
+                <i class="fa fa-chevron-left"></i> 自定义滚动条的重构
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/25/Hexo博客搭建之路/" rel="prev" title="Hexo博客搭建之路">
-                Hexo博客搭建之路 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -363,8 +356,8 @@ border-radius:50%">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/25/笔记/"
-           data-title="新的布局模式和BFC还有些杂七杂八的小知识" data-url="http://www.maiff.ren/2016/02/25/笔记/">
+      <div class="ds-thread" data-thread-key="2016/03/11/每日收获-对象赋值和一些乱七八糟的知识/"
+           data-title="每日收获---对象赋值和一些乱七八糟的知识" data-url="http://www.maiff.ren/2016/03/11/每日收获-对象赋值和一些乱七八糟的知识/">
       </div>
     
   </div>
@@ -478,7 +471,7 @@ border-radius:50%">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016-1-4学习成果"><span class="nav-number">1.</span> <span class="nav-text">2016.1.4学习成果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的赋值"><span class="nav-number">1.</span> <span class="nav-text">对象的赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杂"><span class="nav-number">2.</span> <span class="nav-text">杂</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
