@@ -85,7 +85,7 @@ a={n:2}
 console.log(a);//{n:2}
 console.log(b);//{n:1}
 也许你能对对象赋值有个更深的理解，">
-<meta property="og:updated_time" content="2016-03-11T03:14:55.749Z">
+<meta property="og:updated_time" content="2016-03-18T14:13:51.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每日收获---对象赋值和一些乱七八糟的知识">
 <meta name="twitter:description" content="对象的赋值var a={n:1};
@@ -314,6 +314,16 @@ console.log(a);//{n:2}
 console.log(b);//{n:1}
 </code></pre><p>也许你能对对象赋值有个更深的理解，在那里<code>b=a</code>，是把{n:1}的引用给b，然后再把a的附到别的对象上，这样a，b就已经没关系了。<br>那第一个代码，因为开始的<code>a.x</code>，这里的a已经确定是{n:1}，详见《JavaScript权威指南》，赋值表达式是从左到右的先确定每一个值再进行赋值。所以后来的a.x已经不是当年的a.x。</p>
 <h3 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h3><p>obj.length===+obj.length就是typeof obj.length ==’Number’</p>
+<pre><code>if(!a){
+    var a=1;
+}
+alert(a);//a=1
+
+if(!a in window){
+    var a=1;
+}
+alert(a);//undefined
+</code></pre><p>第一个a是一个布尔值，第二个是判断a是否在windo里面。</p>
 
       
     </div>
@@ -406,7 +416,7 @@ console.log(b);//{n:1}
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
