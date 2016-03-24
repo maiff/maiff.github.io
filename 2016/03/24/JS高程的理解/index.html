@@ -57,16 +57,37 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta name="description" content="函数传参总是传值，不传引用
+函数的名字仅仅是一个包含指针的变量而已。因此，即使是在不同的环境中执行，全局的sayColor()函数与o.sayColor()指向的仍然是同一个函数
+window.color=&amp;quot;red&amp;quot;;
+var o ={ color: &amp;quot;bule&amp;quot;};
+function sayColor(){
+  alert(this.color);
+}
+s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS高程的理解">
 <meta property="og:url" content="http://www.maiff.ren/2016/03/24/JS高程的理解/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
-<meta property="og:updated_time" content="2016-03-24T14:24:51.831Z">
+<meta property="og:description" content="函数传参总是传值，不传引用
+函数的名字仅仅是一个包含指针的变量而已。因此，即使是在不同的环境中执行，全局的sayColor()函数与o.sayColor()指向的仍然是同一个函数
+window.color=&amp;quot;red&amp;quot;;
+var o ={ color: &amp;quot;bule&amp;quot;};
+function sayColor(){
+  alert(this.color);
+}
+s">
+<meta property="og:updated_time" content="2016-03-24T15:33:33.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程的理解">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:description" content="函数传参总是传值，不传引用
+函数的名字仅仅是一个包含指针的变量而已。因此，即使是在不同的环境中执行，全局的sayColor()函数与o.sayColor()指向的仍然是同一个函数
+window.color=&amp;quot;red&amp;quot;;
+var o ={ color: &amp;quot;bule&amp;quot;};
+function sayColor(){
+  alert(this.color);
+}
+s">
 
 
 
@@ -260,6 +281,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/所看之书/" itemprop="url" rel="index">
+                    <span itemprop="name">所看之书</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -287,7 +327,82 @@
       
 
       
-        
+        <ol>
+<li>函数传参总是传值，不传引用</li>
+<li><p>函数的名字仅仅是一个包含指针的变量而已。因此，即使是在不同的环境中执行，全局的<code>sayColor()</code>函数与<code>o.sayColor()</code>指向的仍然是同一个函数</p>
+<pre><code>window.color=&quot;red&quot;;
+var o ={ color: &quot;bule&quot;};
+function sayColor(){
+  alert(this.color);
+}
+sayColor();
+o.sayColor=sayColor;
+o.sayColor();
+</code></pre></li>
+<li><p>数组迭代方法的实现主要是<code>every、filter、map、some</code>、主要原理是用call。</p>
+<pre><code>Array.prototype.every = function(fun /*, thisp*/)
+  { 
+   var len = this.length;
+   if (typeof fun != &quot;function&quot;)
+    throw new TypeError();
+
+   var thisp = arguments[1];
+   for (var i = 0; i &lt; len; i++)
+   { 
+    if (i in this &amp;&amp; !fun.call(thisp, this[i], i, this))
+    return false;
+   }
+
+   return true;
+ };
+
+  Array.prototype.some = function(fun /*, thisp*/)
+  { 
+   var len = this.length;
+   if (typeof fun != &quot;function&quot;)
+    throw new TypeError();
+
+   var thisp = arguments[1];
+   for (var i = 0; i &lt; len; i++)
+   { 
+    if (fun.call(thisp, this[i], i, this))
+    return true;
+   }
+
+   return false;
+ };
+  Array.prototype.fliter = function(fun /*, thisp*/)
+  { 
+   var len = this.length;
+   var result=[];
+   if (typeof fun != &quot;function&quot;)
+    throw new TypeError();
+
+   var thisp = arguments[1];
+   for (var i = 0; i &lt; len; i++)
+   { 
+    if (fun.call(thisp, this[i], i, this))
+      result.push(this[i]);
+   }
+   return result;
+
+ };
+  Array.prototype.forEach= function(fun /*, thisp*/)
+  { 
+   var len = this.length;
+   var result=[];
+   if (typeof fun != &quot;function&quot;)
+    throw new TypeError();
+   var thisp = arguments[1];
+   for (var i = 0; i &lt; len; i++)
+   { 
+    fun.call(thisp, this[i], i, this);
+   }
+ };
+</code></pre></li>
+</ol>
+<p>又有新的问题，call方法的工作方式，工作方法是什么。可以根据编译原理思考吗？</p>
+
       
     </div>
 
