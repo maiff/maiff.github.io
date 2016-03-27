@@ -77,7 +77,7 @@ function sayColor(){
   alert(this.color);
 }
 s">
-<meta property="og:updated_time" content="2016-03-24T15:33:33.077Z">
+<meta property="og:updated_time" content="2016-03-26T14:17:57.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程的理解">
 <meta name="twitter:description" content="函数传参总是传值，不传引用
@@ -402,6 +402,12 @@ o.sayColor();
 </code></pre></li>
 </ol>
 <p>又有新的问题，call方法的工作方式，工作方法是什么。可以根据编译原理思考吗？</p>
+<hr>
+<ol>
+<li>Boolean对象创建出来的，会引起误解，建议永远都不要用</li>
+<li>基本包装类型：基本类型会自动创建一个实列然后调用指定方法，最后销毁这个对象。</li>
+<li>arguments.callee代表本生，Function.caller,代表调用者的引用。在ES5严格模式中前者是被禁止的。</li>
+</ol>
 
       
     </div>
