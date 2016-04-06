@@ -57,37 +57,30 @@
 
 
 
-<meta name="description" content="废话不多说上代码：
-function find_most(arr){
-    var keyMap={};
-    var i,len=arr.length,count=0,count_item;
-    for(i=0;i&amp;lt;len;i++){
-        var item=arr[i];
-        if(!keyMap[item]){
-            keyMap[ite">
+<meta name="description" content="按照老规矩先上demo
+思路及流程
+先写整体框架HTML和CSS：由于就一个页面很简单，HTML所有需要的元素都起了id，同时为了适配不同的移动端，用了rem，然后用了媒体查询适配不同的屏幕，然后设计一个基准字体大小。
+然后就是JS设计，由于最近写的东西都是三层架构，同时为了减少全局变量的数量，写出低耦合，高内聚的代码，代码主要分成这几部分：
+定位：用了百度地图的JS代码，本来，想用定位API,但">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每日算法---找到数组中出现最多次数的元素并输出它最后出现的位置">
-<meta property="og:url" content="http://www.maiff.ren/2016/03/03/每日算法-找到数组中出现最多次数的元素并输出它最后出现的位置/index.html">
+<meta property="og:title" content="天气预报的应用">
+<meta property="og:url" content="http://www.maiff.ren/2016/04/06/天气预报的应用/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="废话不多说上代码：
-function find_most(arr){
-    var keyMap={};
-    var i,len=arr.length,count=0,count_item;
-    for(i=0;i&amp;lt;len;i++){
-        var item=arr[i];
-        if(!keyMap[item]){
-            keyMap[ite">
-<meta property="og:updated_time" content="2016-03-03T16:02:55.276Z">
+<meta property="og:description" content="按照老规矩先上demo
+思路及流程
+先写整体框架HTML和CSS：由于就一个页面很简单，HTML所有需要的元素都起了id，同时为了适配不同的移动端，用了rem，然后用了媒体查询适配不同的屏幕，然后设计一个基准字体大小。
+然后就是JS设计，由于最近写的东西都是三层架构，同时为了减少全局变量的数量，写出低耦合，高内聚的代码，代码主要分成这几部分：
+定位：用了百度地图的JS代码，本来，想用定位API,但">
+<meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/PC-weather.jpg">
+<meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/weather.jpg">
+<meta property="og:updated_time" content="2016-04-06T11:14:05.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="每日算法---找到数组中出现最多次数的元素并输出它最后出现的位置">
-<meta name="twitter:description" content="废话不多说上代码：
-function find_most(arr){
-    var keyMap={};
-    var i,len=arr.length,count=0,count_item;
-    for(i=0;i&amp;lt;len;i++){
-        var item=arr[i];
-        if(!keyMap[item]){
-            keyMap[ite">
+<meta name="twitter:title" content="天气预报的应用">
+<meta name="twitter:description" content="按照老规矩先上demo
+思路及流程
+先写整体框架HTML和CSS：由于就一个页面很简单，HTML所有需要的元素都起了id，同时为了适配不同的移动端，用了rem，然后用了媒体查询适配不同的屏幕，然后设计一个基准字体大小。
+然后就是JS设计，由于最近写的东西都是三层架构，同时为了减少全局变量的数量，写出低耦合，高内聚的代码，代码主要分成这几部分：
+定位：用了百度地图的JS代码，本来，想用定位API,但">
 
 
 
@@ -105,7 +98,7 @@ function find_most(arr){
   };
 </script>
 
-  <title> 每日算法---找到数组中出现最多次数的元素并输出它最后出现的位置 | Maiff </title>
+  <title> 天气预报的应用 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +256,7 @@ function find_most(arr){
             
             
               
-                每日算法---找到数组中出现最多次数的元素并输出它最后出现的位置
+                天气预报的应用
               
             
           </h1>
@@ -275,8 +268,8 @@ function find_most(arr){
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-03T23:59:31+08:00" content="2016-03-03">
-              2016-03-03
+            <time itemprop="dateCreated" datetime="2016-04-06T16:49:56+08:00" content="2016-04-06">
+              2016-04-06
             </time>
           </span>
 
@@ -289,8 +282,8 @@ function find_most(arr){
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/每日算法/" itemprop="url" rel="index">
-                    <span itemprop="name">每日算法</span>
+                  <a href="/categories/技术应用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术应用</span>
                   </a>
                 </span>
 
@@ -305,8 +298,8 @@ function find_most(arr){
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/每日算法-找到数组中出现最多次数的元素并输出它最后出现的位置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/每日算法-找到数组中出现最多次数的元素并输出它最后出现的位置/" itemprop="commentsCount"></span>
+                <a href="/2016/04/06/天气预报的应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/06/天气预报的应用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,34 +320,31 @@ function find_most(arr){
       
 
       
-        <p>废话不多说上代码：</p>
-<pre><code>function find_most(arr){
-    var keyMap={};
-    var i,len=arr.length,count=0,count_item;
-    for(i=0;i&lt;len;i++){
-        var item=arr[i];
-        if(!keyMap[item]){
-            keyMap[item]=1;//判断这个对象里有没有这个以这个元素名为属性的元素
-        }
-        else{//去重也可以用类似的方法
-            keyMap[item]+=1;
-        }
-        if(keyMap[item]&gt;count){
-            count=keyMap[item];
-            count_item=item;
+        <p>按照老规矩先上<a href="http://115.159.24.134/weather/" target="_blank" rel="external">demo</a></p>
+<h3 id="思路及流程"><a href="#思路及流程" class="headerlink" title="思路及流程"></a>思路及流程</h3><ol>
+<li>先写整体框架HTML和CSS：<br>由于就一个页面很简单，HTML所有需要的元素都起了id，同时为了适配不同的移动端，用了<a href="https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&amp;mid=402988608&amp;idx=1&amp;sn=43dd913151b8208487b3091a40ba008d" target="_blank" rel="external">rem</a>，然后用了媒体查询适配不同的屏幕，然后设计一个基准字体大小。</li>
+<li>然后就是JS设计，由于最近写的东西都是三层架构，同时为了减少全局变量的数量，写出低耦合，高内聚的代码，代码主要分成这几部分：<ul>
+<li>定位：用了百度地图的JS代码，本来，想用定位API,但是不能跨域，同时如果要想跨域需要后端的配合那是之后的事情。</li>
+<li>得到天气的json数据，这里那个API就不会有跨域的问题，同时由于是用原生的JS，所以编写了兼容性的Ajax的方法和原生解析json的方法，就没有考虑低版本的兼容性。</li>
+<li>最后就是表现层，表现数据</li>
+<li>同时写了几个工具函数</li>
+<li>然后就是最后代码的修补工作，因为觉得纯色背景不好看，就在网上找了每日bing的壁纸拿个用了。</li>
+</ul>
+</li>
+</ol>
+<p>效果图ON PC<img src="http://7xpser.com1.z0.glb.clouddn.com/PC-weather.jpg" alt=""><br>效果图ON Phone<br><img src="http://7xpser.com1.z0.glb.clouddn.com/weather.jpg" alt=""></p>
+<h3 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h3><ol>
+<li>开始在定位上，由于没用过Ajax不知道跨域的问题，一直没有解决，最后用JS代码解决了。</li>
+<li>百度地图中函数好多都是异步，无疑增加了耦合，没有解决。</li>
+<li>Ajax的代码可以重构结合今天看到的工厂模式一定很厉害。</li>
+<li>感觉全局变量还是很多</li>
+</ol>
+<h3 id="学到什么"><a href="#学到什么" class="headerlink" title="学到什么"></a>学到什么</h3><ol>
+<li>ajax的运用</li>
+<li>外部库的使用</li>
+<li>rem的使用</li>
+</ol>
 
-        }
-    }
-    console.log(&apos;出现最多的是&apos;,count_item,&apos;出现了&apos;,count,&apos;次&apos;);
-    return count_item;
-}
-find_most([1,1,2,2,2,13]);
-function return_index(item,arr){
-    var new_array=arr.reverse();
-    return arr.length-1-new_array.indexOf(item);
-}//自己想出来的先把数组倒过来，然后就简单了
-console.log(return_index(find_most([1,1,2,2,2,13]),[1,1,2,2,2,13]));
-</code></pre>
       
     </div>
 
@@ -365,17 +355,13 @@ console.log(return_index(find_most([1,1,2,2,2,13]),[1,1,2,2,2,13]));
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/03/今天的感悟与收获/" rel="next" title="今天的感悟与收获">
-                <i class="fa fa-chevron-left"></i> 今天的感悟与收获
+              <a href="/2016/04/04/JS设计模式/" rel="next" title="JS设计模式">
+                <i class="fa fa-chevron-left"></i> JS设计模式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/head头标签/" rel="prev" title="head头标签">
-                head头标签 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -400,8 +386,8 @@ console.log(return_index(find_most([1,1,2,2,2,13]),[1,1,2,2,2,13]));
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/每日算法-找到数组中出现最多次数的元素并输出它最后出现的位置/"
-           data-title="每日算法---找到数组中出现最多次数的元素并输出它最后出现的位置" data-url="http://www.maiff.ren/2016/03/03/每日算法-找到数组中出现最多次数的元素并输出它最后出现的位置/">
+      <div class="ds-thread" data-thread-key="2016/04/06/天气预报的应用/"
+           data-title="天气预报的应用" data-url="http://www.maiff.ren/2016/04/06/天气预报的应用/">
       </div>
     
   </div>
@@ -515,7 +501,7 @@ console.log(return_index(find_most([1,1,2,2,2,13]),[1,1,2,2,2,13]));
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路及流程"><span class="nav-number">1.</span> <span class="nav-text">思路及流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到问题"><span class="nav-number">2.</span> <span class="nav-text">遇到问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学到什么"><span class="nav-number">3.</span> <span class="nav-text">学到什么</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
