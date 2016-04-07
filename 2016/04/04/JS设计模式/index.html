@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Maiff">
 <meta property="og:description" content="放了一个清明节的假，加上自己的不上的课的天数，一共五天假，一下把自己的惰性放出来了。说说我这个假期干的事吧。第二遍看《JS设计模式》。发现我之前是多么的天真。之前做ife的项目，结合我最近所看的文章，发现我自己慢慢了解一种设计模式，三层架构——数据访问层、业务逻辑层、表示层。感觉跟MVC差不多，之前一直在说这些设计模型，完全不知道是什么意思，现在终于有所感觉。（图片来自百度）这体现一种软件思想，高">
 <meta property="og:image" content="http://b.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c04fe574d11373f0e13267cdc566209e/5ab5c9ea15ce36d3c435fe3f3af33a87e950b18f.jpg">
-<meta property="og:updated_time" content="2016-04-04T16:12:46.389Z">
+<meta property="og:updated_time" content="2016-04-06T15:55:54.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS设计模式">
 <meta name="twitter:description" content="放了一个清明节的假，加上自己的不上的课的天数，一共五天假，一下把自己的惰性放出来了。说说我这个假期干的事吧。第二遍看《JS设计模式》。发现我之前是多么的天真。之前做ife的项目，结合我最近所看的文章，发现我自己慢慢了解一种设计模式，三层架构——数据访问层、业务逻辑层、表示层。感觉跟MVC差不多，之前一直在说这些设计模型，完全不知道是什么意思，现在终于有所感觉。（图片来自百度）这体现一种软件思想，高">
@@ -316,6 +316,34 @@
 <h3 id="惰性实例化"><a href="#惰性实例化" class="headerlink" title="惰性实例化"></a>惰性实例化</h3><p>不用每次都返回一个对象，根据实际情况实际分析。缺点：比较复杂。</p>
 <h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>由于不同浏览器的兼容性，用单体模式来实现兼容。</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这种模式的优点：维护性强、增加代码可读性，便于优化等。<br>同时也有缺点强耦合，不利于做单元测试。<br>其实这些书上说这么多我还是不能理解，就像当时我没有很好的JS基础时不能看懂这种模式。<br>我感觉实际开发，应该是不同的模式大综合。</p>
+<h2 id="2-工厂模式——一种降低耦合的设计模式"><a href="#2-工厂模式——一种降低耦合的设计模式" class="headerlink" title="2.工厂模式——一种降低耦合的设计模式"></a>2.工厂模式——一种降低耦合的设计模式</h2><h3 id="简单的工厂模式"><a href="#简单的工厂模式" class="headerlink" title="简单的工厂模式"></a>简单的工厂模式</h3><pre><code>var productManager = {};
+
+productManager.createProductA = function () {
+    console.log(&apos;ProductA&apos;);
+}
+
+productManager.createProductB = function () {
+    console.log(&apos;ProductB&apos;);
+}
+
+productManager.factory = function (typeType) {
+    return new productManager[typeType];
+}
+
+productManager.factory(&quot;createProductA&quot;);
+</code></pre><h3 id="用许多小型对象组成一个大型对象"><a href="#用许多小型对象组成一个大型对象" class="headerlink" title="用许多小型对象组成一个大型对象"></a>用许多小型对象组成一个大型对象</h3><p>工厂模式封装了很多小型对象，降低了耦合，后期维护起来方便，增加了代码复杂度，但是阅读起比较复杂。</p>
+<h3 id="复杂的工厂模式"><a href="#复杂的工厂模式" class="headerlink" title="复杂的工厂模式"></a>复杂的工厂模式</h3><p>按照书上所说，工厂模式需要接口技术，我决定把我的XHR变成工厂模式</p>
+<h3 id="工厂模式的利弊"><a href="#工厂模式的利弊" class="headerlink" title="工厂模式的利弊"></a>工厂模式的利弊</h3><p>利：</p>
+<ul>
+<li>消除耦合</li>
+<li>减少代码</li>
+<li>调用方便</li>
+</ul>
+<p>弊：</p>
+<ul>
+<li>不能滥用</li>
+<li>能简单就简单</li>
+</ul>
 
       
     </div>
@@ -477,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-最普遍的设计模式——单体模式"><span class="nav-number">1.</span> <span class="nav-text">1.最普遍的设计模式——单体模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#划分命名空间"><span class="nav-number">1.1.</span> <span class="nav-text">划分命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用作特定网页专用代码的包装器单体"><span class="nav-number">1.2.</span> <span class="nav-text">用作特定网页专用代码的包装器单体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥有私有成员"><span class="nav-number">1.3.</span> <span class="nav-text">拥有私有成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性实例化"><span class="nav-number">1.4.</span> <span class="nav-text">惰性实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支"><span class="nav-number">1.5.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-最普遍的设计模式——单体模式"><span class="nav-number">1.</span> <span class="nav-text">1.最普遍的设计模式——单体模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#划分命名空间"><span class="nav-number">1.1.</span> <span class="nav-text">划分命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用作特定网页专用代码的包装器单体"><span class="nav-number">1.2.</span> <span class="nav-text">用作特定网页专用代码的包装器单体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥有私有成员"><span class="nav-number">1.3.</span> <span class="nav-text">拥有私有成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性实例化"><span class="nav-number">1.4.</span> <span class="nav-text">惰性实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支"><span class="nav-number">1.5.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-工厂模式——一种降低耦合的设计模式"><span class="nav-number">2.</span> <span class="nav-text">2.工厂模式——一种降低耦合的设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的工厂模式"><span class="nav-number">2.1.</span> <span class="nav-text">简单的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用许多小型对象组成一个大型对象"><span class="nav-number">2.2.</span> <span class="nav-text">用许多小型对象组成一个大型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂的工厂模式"><span class="nav-number">2.3.</span> <span class="nav-text">复杂的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式的利弊"><span class="nav-number">2.4.</span> <span class="nav-text">工厂模式的利弊</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
