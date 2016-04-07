@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Maiff">
 <meta property="og:description" content="放了一个清明节的假，加上自己的不上的课的天数，一共五天假，一下把自己的惰性放出来了。说说我这个假期干的事吧。第二遍看《JS设计模式》。发现我之前是多么的天真。之前做ife的项目，结合我最近所看的文章，发现我自己慢慢了解一种设计模式，三层架构——数据访问层、业务逻辑层、表示层。感觉跟MVC差不多，之前一直在说这些设计模型，完全不知道是什么意思，现在终于有所感觉。（图片来自百度）这体现一种软件思想，高">
 <meta property="og:image" content="http://b.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=c04fe574d11373f0e13267cdc566209e/5ab5c9ea15ce36d3c435fe3f3af33a87e950b18f.jpg">
-<meta property="og:updated_time" content="2016-04-06T15:55:54.525Z">
+<meta property="og:updated_time" content="2016-04-07T13:12:31.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS设计模式">
 <meta name="twitter:description" content="放了一个清明节的假，加上自己的不上的课的天数，一共五天假，一下把自己的惰性放出来了。说说我这个假期干的事吧。第二遍看《JS设计模式》。发现我之前是多么的天真。之前做ife的项目，结合我最近所看的文章，发现我自己慢慢了解一种设计模式，三层架构——数据访问层、业务逻辑层、表示层。感觉跟MVC差不多，之前一直在说这些设计模型，完全不知道是什么意思，现在终于有所感觉。（图片来自百度）这体现一种软件思想，高">
@@ -344,6 +344,27 @@ productManager.factory(&quot;createProductA&quot;);
 <li>不能滥用</li>
 <li>能简单就简单</li>
 </ul>
+<h2 id="3-桥接模式"><a href="#3-桥接模式" class="headerlink" title="3.桥接模式"></a>3.桥接模式</h2><h3 id="用桥接模式联接多个类"><a href="#用桥接模式联接多个类" class="headerlink" title="用桥接模式联接多个类"></a>用桥接模式联接多个类</h3><p>感觉跟适配器差不多，跟门面有差不多……</p>
+<h3 id="桥接模式适用场景"><a href="#桥接模式适用场景" class="headerlink" title="桥接模式适用场景"></a>桥接模式适用场景</h3><p>适用于摸个东西应该显示在哪什么的。</p>
+<h3 id="桥接模式的利弊"><a href="#桥接模式的利弊" class="headerlink" title="桥接模式的利弊"></a>桥接模式的利弊</h3><p>利：</p>
+<ul>
+<li>可以把抽象和现实隔离开来，并且后期维护者更加轻松。<br>弊：</li>
+<li>对性能可能造成影响</li>
+</ul>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>感觉好多设计模式有共通地方，不知道是我学的不深还是本来就是。</p>
+<h2 id="4-组合模式"><a href="#4-组合模式" class="headerlink" title="4.组合模式"></a>4.组合模式</h2><p>这个模式太棒啦，我准备重构我的代码关于表单的刚好对之前的东西的复习，见下一篇博文。</p>
+<h2 id="5-门面模式"><a href="#5-门面模式" class="headerlink" title="5.门面模式"></a>5.门面模式</h2><p>其实我早就接触到了，在好多JS库里为了兼容不同的浏览器，会用门面模式</p>
+<h3 id="用作便利的门面模式"><a href="#用作便利的门面模式" class="headerlink" title="用作便利的门面模式"></a>用作便利的门面模式</h3><p>感觉跟桥接模式差不多……但是不能乱用，要有利弊权衡。</p>
+<h3 id="门面模式利弊"><a href="#门面模式利弊" class="headerlink" title="门面模式利弊"></a>门面模式利弊</h3><p>利：</p>
+<ul>
+<li>增加代码复用性</li>
+<li>减低耦合</li>
+<li>代码更加灵活</li>
+</ul>
+<p>弊：</p>
+<ul>
+<li>觉得原书说的很好，不能因为冰箱好就随身把冰箱戴着，用这种模式的时候要考虑到多个方面，是否代价大于收益</li>
+</ul>
 
       
     </div>
@@ -436,7 +457,7 @@ productManager.factory(&quot;createProductA&quot;);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -505,7 +526,7 @@ productManager.factory(&quot;createProductA&quot;);
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-最普遍的设计模式——单体模式"><span class="nav-number">1.</span> <span class="nav-text">1.最普遍的设计模式——单体模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#划分命名空间"><span class="nav-number">1.1.</span> <span class="nav-text">划分命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用作特定网页专用代码的包装器单体"><span class="nav-number">1.2.</span> <span class="nav-text">用作特定网页专用代码的包装器单体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥有私有成员"><span class="nav-number">1.3.</span> <span class="nav-text">拥有私有成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性实例化"><span class="nav-number">1.4.</span> <span class="nav-text">惰性实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支"><span class="nav-number">1.5.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-工厂模式——一种降低耦合的设计模式"><span class="nav-number">2.</span> <span class="nav-text">2.工厂模式——一种降低耦合的设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的工厂模式"><span class="nav-number">2.1.</span> <span class="nav-text">简单的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用许多小型对象组成一个大型对象"><span class="nav-number">2.2.</span> <span class="nav-text">用许多小型对象组成一个大型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂的工厂模式"><span class="nav-number">2.3.</span> <span class="nav-text">复杂的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式的利弊"><span class="nav-number">2.4.</span> <span class="nav-text">工厂模式的利弊</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-最普遍的设计模式——单体模式"><span class="nav-number">1.</span> <span class="nav-text">1.最普遍的设计模式——单体模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#划分命名空间"><span class="nav-number">1.1.</span> <span class="nav-text">划分命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用作特定网页专用代码的包装器单体"><span class="nav-number">1.2.</span> <span class="nav-text">用作特定网页专用代码的包装器单体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥有私有成员"><span class="nav-number">1.3.</span> <span class="nav-text">拥有私有成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性实例化"><span class="nav-number">1.4.</span> <span class="nav-text">惰性实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支"><span class="nav-number">1.5.</span> <span class="nav-text">分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-工厂模式——一种降低耦合的设计模式"><span class="nav-number">2.</span> <span class="nav-text">2.工厂模式——一种降低耦合的设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的工厂模式"><span class="nav-number">2.1.</span> <span class="nav-text">简单的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用许多小型对象组成一个大型对象"><span class="nav-number">2.2.</span> <span class="nav-text">用许多小型对象组成一个大型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂的工厂模式"><span class="nav-number">2.3.</span> <span class="nav-text">复杂的工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式的利弊"><span class="nav-number">2.4.</span> <span class="nav-text">工厂模式的利弊</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-桥接模式"><span class="nav-number">3.</span> <span class="nav-text">3.桥接模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用桥接模式联接多个类"><span class="nav-number">3.1.</span> <span class="nav-text">用桥接模式联接多个类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式适用场景"><span class="nav-number">3.2.</span> <span class="nav-text">桥接模式适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式的利弊"><span class="nav-number">3.3.</span> <span class="nav-text">桥接模式的利弊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-1"><span class="nav-number">3.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-组合模式"><span class="nav-number">4.</span> <span class="nav-text">4.组合模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-门面模式"><span class="nav-number">5.</span> <span class="nav-text">5.门面模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用作便利的门面模式"><span class="nav-number">5.1.</span> <span class="nav-text">用作便利的门面模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#门面模式利弊"><span class="nav-number">5.2.</span> <span class="nav-text">门面模式利弊</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
