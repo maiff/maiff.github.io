@@ -57,16 +57,20 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta name="description" content="组合模式看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。下面有一张图来表达组合模式(第一次用xmind有点丑)
+然后书上举得第一个例子是表单验证，然后我就想到ife里面有表单验证，然后我想那还不简单，就是有点繁琐，后来我看到这个组合，我就认识到我太天真了，向他那么写代码的复用率特别高，而像我那样写，只会在当前的模">
 <meta property="og:type" content="article">
 <meta property="og:title" content="组合模式的实际应用">
 <meta property="og:url" content="http://www.maiff.ren/2016/04/10/组合模式的实际应用/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
-<meta property="og:updated_time" content="2016-04-10T05:10:20.520Z">
+<meta property="og:description" content="组合模式看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。下面有一张图来表达组合模式(第一次用xmind有点丑)
+然后书上举得第一个例子是表单验证，然后我就想到ife里面有表单验证，然后我想那还不简单，就是有点繁琐，后来我看到这个组合，我就认识到我太天真了，向他那么写代码的复用率特别高，而像我那样写，只会在当前的模">
+<meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/%E7%BB%84%E5%90%88%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2016-04-10T06:13:15.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合模式的实际应用">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:description" content="组合模式看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。下面有一张图来表达组合模式(第一次用xmind有点丑)
+然后书上举得第一个例子是表单验证，然后我就想到ife里面有表单验证，然后我想那还不简单，就是有点繁琐，后来我看到这个组合，我就认识到我太天真了，向他那么写代码的复用率特别高，而像我那样写，只会在当前的模">
 
 
 
@@ -260,6 +264,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术应用/" itemprop="url" rel="index">
+                    <span itemprop="name">技术应用</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -287,7 +310,115 @@
       
 
       
-        
+        <h2 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h2><p>看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。<br>什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。<br>下面有一张图来表达组合模式<br><img src="http://7xpser.com1.z0.glb.clouddn.com/%E7%BB%84%E5%90%88%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.jpg" alt=""><br>(第一次用xmind有点丑)</p>
+<p>然后书上举得第一个例子是表单验证，然后我就想到ife里面有表单验证，然后我想那还不简单，就是有点繁琐，后来我看到这个组合，我就认识到我太天真了，向他那么写代码的复用率特别高，而像我那样写，只会在当前的模式下有用。<br>废话不多说我直接来说实现步骤。<br>首先需要几个工具函数：<br><strong>Interface.js</strong></p>
+<pre><code>//author by maiff
+//from JS design
+//2016.4.9
+
+//Constructor
+var Interface=function(name,methods){
+    if(arguments.length!=2){
+        throw new Error(&apos;interface constructor called with&apos;+arguments.length+&apos;arguments,but expected exactly 2.&apos;);
+    }
+    this.name=name;
+    this.methods=[];
+    var self=this;
+    methods.map(function(item){
+        if(typeof item!==&apos;string&apos;){
+            throw new Error(&apos;Interface construct expects method names to be passed in as a string&apos;);            
+        }
+        self.methods.push(item);
+        return item;
+    });
+
+};
+//Static class methods
+Interface.ensureImplements=function(object){
+    if(arguments.length&lt;2){
+        throw new Error(&apos;Function Interface.ensureImplements called with&apos;+arguments.length+&apos;arguments,but expected at least 2.&apos;);        
+    }
+    for(var i=1,len=arguments.length;i&lt;len;i++){
+        var interface=arguments[i];
+        if(interface.constructor!==Interface){
+            throw new Error(&apos;Function Interface.ensureImplements expects arguments&apos;+
+                &apos;two and above to be instances of Interface.&apos;);
+        }
+        for(var j=0,methodsLen=interface.methods.length;j&lt;methodsLen;j++){
+            var method=interface.methods[j];
+            if(!object[method]||typeof object[method]!==&apos;function&apos;){
+                throw new Error(&apos;Function Interface.ensureImplements:object does not impllement the &apos;+
+                    interface.name+&apos; interface.Method &apos;+method+&apos;was not found.&apos;)
+            }
+        }
+    }
+};
+</code></pre><p>一个接口类一个静态方法，很有门道，然后配合注释就能很好的实现接口。</p>
+<p><strong>extend.js</strong></p>
+<pre><code>//author by maiff
+//from js design
+//2016.4.9
+function extend(subClass,supClass){
+    var F=function () {};
+    F.prototype=supClass.prototype;
+    subClass.prototype=new F();//防止改变父类
+    subClass.prototype.constructor=subClass;
+
+    subClass.supClass=supClass.prototype;//降低耦合
+    if(supClass.prototype.constructor==Object.prototype.constructor){
+        supClass.prototype.constructor=supClass;
+    }
+}
+</code></pre><p><strong>cookie.js</strong></p>
+<pre><code>//取得cookie  
+function getCookie(name) {  
+ var nameEQ = name + &quot;=&quot;;  
+ var ca = document.cookie.split(&apos;;&apos;);    //把cookie分割成组  
+ for(var i=0;i &lt; ca.length;i++) {  
+     var c = ca[i];                      //取得字符串  
+ while (c.charAt(0)==&apos; &apos;) {          //判断一下字符串有没有前导空格  
+     c = c.substring(1,c.length);      //有的话，从第二位开始取  
+ }  
+ if (c.indexOf(nameEQ) == 0) {       //如果含有我们要的name  
+     return unescape(c.substring(nameEQ.length,c.length));    //解码并截取我们要值  
+ }  
+ }  
+ return &apos;&apos;; 
+}  
+
+//设置cookie  
+function setCookie(name, value, seconds) {  
+ seconds = seconds || 0;   //seconds有值就直接赋值，没有为0，这个根php不一样。  
+ var expires = &quot;&quot;;  
+ if (seconds != 0 ) {      //设置cookie生存时间  
+ var date = new Date();  
+     date.setTime(date.getTime()+(seconds*1000));  
+     expires = &quot;; expires=&quot;+date.toGMTString();  
+ }  
+     document.cookie = name+&quot;=&quot;+escape(value)+expires+&quot;; path=/&quot;;   //转码并赋值  
+} 
+</code></pre><p>这是几个基本的工具函数。<br>那我下面来说说我的整体的结构。<br>有两个接口</p>
+<pre><code>var Composite=new Interface(&apos;Composite&apos;,[&apos;add&apos;,&apos;remove&apos;,&apos;getChild&apos;,&apos;getAllChild&apos;]);
+var FormItem=new Interface(&apos;FormItem&apos;,[&apos;save&apos;,&apos;restore&apos;]);
+</code></pre><ul>
+<li><p>第一个是一个CompositeForm，implements Composite，FormItem.<br>代码我就不贴了大家可以去我的<a href="">github</a>上看。<br>这个类是包括所有的表单。</p>
+</li>
+<li><p>然后就是一个Field的类，是第二层组合对象。</p>
+</li>
+<li><p>再者就是叶子对象了，有的是text表单，有的是textarea表单等，</p>
+</li>
+</ul>
+<p>然后书上没有表单验证功能，但ife要求了，可以直接写，但是我考虑到代码的复用性，我把表单的验证作为几个参数传到类里面去，在类里面封装，最后写的时候直接把验证函数传进去就好，我想肯定有更好的方法。</p>
+<p><a href="">demo</a><br>就没有写样式了，我还把样式类加到上去了，这样更容易后期扩展。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>组合的好处：</p>
+<ul>
+<li>容易理解，封装性强，好维护</li>
+<li>然后扩展性强，</li>
+<li>代码复用率高等等</li>
+</ul>
+<p>不过增加了代码的复杂度。</p>
+<p>最后我还有些问题，比如我没有把我最近的学的三层架构加进去，把逻辑层表现层数据层分开，我想这样会更好，同时数据的传递方式我还需要学习。总的来说还是受益匪浅。</p>
+
       
     </div>
 
@@ -444,7 +575,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#组合模式"><span class="nav-number">1.</span> <span class="nav-text">组合模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
