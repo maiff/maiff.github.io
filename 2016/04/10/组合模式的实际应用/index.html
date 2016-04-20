@@ -66,7 +66,7 @@
 <meta property="og:description" content="组合模式看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。下面有一张图来表达组合模式(第一次用xmind有点丑)
 然后书上举得第一个例子是表单验证，然后我就想到ife里面有表单验证，然后我想那还不简单，就是有点繁琐，后来我看到这个组合，我就认识到我太天真了，向他那么写代码的复用率特别高，而像我那样写，只会在当前的模">
 <meta property="og:image" content="http://7xpser.com1.z0.glb.clouddn.com/%E7%BB%84%E5%90%88%E7%9A%84%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2016-04-10T06:13:15.622Z">
+<meta property="og:updated_time" content="2016-04-11T08:18:10.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合模式的实际应用">
 <meta name="twitter:description" content="组合模式看到《JS设计模式》里的组合模式感觉有种相见恨晚的感觉。什么是组合模式？按照我的感觉，跟java里的组合差不多，但是java方便多了。下面有一张图来表达组合模式(第一次用xmind有点丑)
@@ -401,7 +401,7 @@ function setCookie(name, value, seconds) {
 <pre><code>var Composite=new Interface(&apos;Composite&apos;,[&apos;add&apos;,&apos;remove&apos;,&apos;getChild&apos;,&apos;getAllChild&apos;]);
 var FormItem=new Interface(&apos;FormItem&apos;,[&apos;save&apos;,&apos;restore&apos;]);
 </code></pre><ul>
-<li><p>第一个是一个CompositeForm，implements Composite，FormItem.<br>代码我就不贴了大家可以去我的<a href="">github</a>上看。<br>这个类是包括所有的表单。</p>
+<li><p>第一个是一个CompositeForm，implements Composite，FormItem.<br>代码我就不贴了大家可以去我的<a href="https://github.com/maiff/formTestWithcomposite" target="_blank" rel="external">github</a>上看。<br>这个类是包括所有的表单。</p>
 </li>
 <li><p>然后就是一个Field的类，是第二层组合对象。</p>
 </li>
@@ -436,6 +436,10 @@ var FormItem=new Interface(&apos;FormItem&apos;,[&apos;save&apos;,&apos;restore&
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/12/新技术的接触与展望和思考/" rel="prev" title="新技术的接触与展望和思考">
+                新技术的接触与展望和思考 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -506,7 +510,7 @@ var FormItem=new Interface(&apos;FormItem&apos;,[&apos;save&apos;,&apos;restore&
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-count">43</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
