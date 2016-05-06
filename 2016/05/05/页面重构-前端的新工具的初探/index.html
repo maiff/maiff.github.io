@@ -66,7 +66,7 @@
 <meta property="og:description" content="重构之后的 demo之前的demo
 之前的废话重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者">
 <meta property="og:image" content="http://i.imgur.com/hPrzHiY.jpg">
-<meta property="og:updated_time" content="2016-05-05T06:27:46.279Z">
+<meta property="og:updated_time" content="2016-05-06T15:34:59.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="页面重构---前端的新工具的初探">
 <meta name="twitter:description" content="重构之后的 demo之前的demo
@@ -312,7 +312,7 @@
       
         <p>重构之后的 <a href="http://115.159.24.134/require/" target="_blank" rel="external">demo</a><br>之前的<a href="http://maiff.ren/Portfolio/2/task-manage/index.html" target="_blank" rel="external">demo</a></p>
 <h3 id="之前的废话"><a href="#之前的废话" class="headerlink" title="之前的废话"></a>之前的废话</h3><p>重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。<br>然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者真的很好用。<br>再用requireJS之前，我看了阮一峰老师对模块化编程的理解，不得不佩服阮老师的文笔，什么东西我不懂，看他的文章，都能得到一个很好的理解，这里有<a href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html" target="_blank" rel="external">链接</a>，了解模块编程就不得不了解：CommonJS和AMD,两者都是一种标准，区别前者同步后这异步这是我的理解，其实会用requireJS我觉得就可以有很好的理解。</p>
-<h3 id="下面我来说说我是怎么用requireJS"><a href="#下面我来说说我是怎么用requireJS" class="headerlink" title="下面我来说说我是怎么用requireJS"></a>下面我来说说我是怎么用requireJS</h3><p><code>&lt;script src=&quot;js/require.js&quot; data-main=&quot;js/main&quot;&gt;&lt;/script&gt;</code><br>那个data-main就是入口函数<br>我的js目录是这样的<img src="http://i.imgur.com/hPrzHiY.jpg" alt=""><br>那个main就是我的主函数，test是我测试requireJS的，然后我就开始写了，我分成四个模块，然后主模块用了jquery，我以为每个模块都要引入jquery，我发现不用，然后我的jquery是引用外链的。<br>在我写的时候我以为requireJS调试起来肯定很困难，但是我发现并没有我想象的那么难，如果出错，完完全全的定位到出错的那行代码，这不由让我想到require的原理，我记得之前我看过阮一峰老师的一篇文章说的就是这个<a href="http://www.ruanyifeng.com/blog/2015/05/commonjs-in-browser.html" target="_blank" rel="external">不知道对不对</a>（to-do）。<br>我知道肯定我的浅薄认识还有好多requireJS的应用技巧我不知道，但是我相信给我时间我一定能完完全全的掌握。</p>
+<h3 id="下面我来说说我是怎么用requireJS"><a href="#下面我来说说我是怎么用requireJS" class="headerlink" title="下面我来说说我是怎么用requireJS"></a>下面我来说说我是怎么用requireJS</h3><p>那个data-main就是入口函数<br>我的js目录是这样的<img src="http://i.imgur.com/hPrzHiY.jpg" alt=""><br>那个main就是我的主函数，test是我测试requireJS的，然后我就开始写了，我分成四个模块，然后主模块用了jquery，我以为每个模块都要引入jquery，我发现不用，然后我的jquery是引用外链的。<br>在我写的时候我以为requireJS调试起来肯定很困难，但是我发现并没有我想象的那么难，如果出错，完完全全的定位到出错的那行代码，这不由让我想到require的原理，我记得之前我看过阮一峰老师的一篇文章说的就是这个<a href="http://www.ruanyifeng.com/blog/2015/05/commonjs-in-browser.html" target="_blank" rel="external">不知道对不对</a>（to-do）。<br>我知道肯定我的浅薄认识还有好多requireJS的应用技巧我不知道，但是我相信给我时间我一定能完完全全的掌握。</p>
 <h3 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h3><p>jquery真的是一个很好用的库，太好用了！<br>我在用的时候主要是操作DOM，然后我深深的体会到$包装器的好处，同时我也对装饰者模式有更好的理解，之前我听了那种言论直接学jquery，我觉得没有很好地js基础是不能深刻理解掌握jquery。<br>然后我也碰到好多问题。</p>
 <pre><code>$(&apos;#test&apos;).click(
     function(){
