@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://www.maiff.ren/2016/05/16/近期总结与想法/index.html">
 <meta property="og:site_name" content="Maiff">
 <meta property="og:description" content="废话部分最近事有点多，就没怎么写博客，开始手边有三个项目，一个自己接的写一个展示的SPA，第一次写写的不好。但是能看，第二个就是黄老师要我写的react，之后就是云梦盐津我负责前端部分，我觉得最后一个有点扯淡……然后为什么我觉得最近比较忙，主要在写那我我自己接的收钱的项目，但是一大半的时间我都在写css，重复同一个东西，所以我觉得我自己没有什么进步，引发了我的思考有可能以后我工作也是这样的状态。天">
-<meta property="og:updated_time" content="2016-05-16T15:51:39.424Z">
+<meta property="og:updated_time" content="2016-05-17T15:24:44.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="近期总结与想法——五月">
 <meta name="twitter:description" content="废话部分最近事有点多，就没怎么写博客，开始手边有三个项目，一个自己接的写一个展示的SPA，第一次写写的不好。但是能看，第二个就是黄老师要我写的react，之后就是云梦盐津我负责前端部分，我觉得最后一个有点扯淡……然后为什么我觉得最近比较忙，主要在写那我我自己接的收钱的项目，但是一大半的时间我都在写css，重复同一个东西，所以我觉得我自己没有什么进步，引发了我的思考有可能以后我工作也是这样的状态。天">
@@ -327,8 +327,18 @@
 <li>单页面应用的一个大致了解</li>
 <li>隐藏任务栏怎么</li>
 <li>placehoder怎么更改样式</li>
-<li>子元素用绝对定位是撑不开父元素的<br>详细：</li>
+<li><p>子元素用绝对定位是撑不开父元素的<br>详细：</p>
+</li>
+<li><p>单页面应用<br>  结合ajax对页面刷新，其实也就是缓存页面<br>  <a href="http://coderlmn.github.io/framework-free-single-page-app/" target="_blank" rel="external">链接</a><br>  下次重构一下代码，试试看。<br>  注意路由</p>
+</li>
+<li><p>隐藏任务栏<br>  原理是strollTo这个函数<br>  <a href="http://blog.csdn.net/hbcui1984/article/details/8350107" target="_blank" rel="external">链接</a><br>  如果页面不够大需要改变页面</p>
+</li>
+<li><p><a href="https://segmentfault.com/q/1010000000397925" target="_blank" rel="external">参考链接</a></p>
+</li>
+<li>以后定位能用css3就用css3而不是用所谓的trick</li>
 </ul>
+<p>因为 BFC 的高度计算包含浮动元素，同时清除浮动元素也会让父元素撑开，所以可以实现父元素被子元素撑开的需求。</p>
+<p>但是 position:absolute 或者 position:fixed 就不一样，它是脱离文档流的，而且不会计算被父元素计算在内，同时也没有办法像浮动一样被清除。所以你的需求应该是无法满足的。</p>
 
       
     </div>
