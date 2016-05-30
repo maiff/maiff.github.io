@@ -57,20 +57,19 @@
 
 
 
-<meta name="description" content="重构之后的 demo之前的demo
-之前的废话重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者">
+<meta name="description" content="最近觉得自己的前端到瓶颈了，于是就开始学习后端的内容，感觉可以不改变自己的语言思维就可以开始撸后端的代码。然后我发现我想多了。
+我以为我可以很快的学node我以为我可以很快上手node，然后很快的可以开始撸应用，的确我按照教程来很快搭建各种东西，网页、cms、博客、聊天室、然而我并不踏实，因为我感觉我是面向包编程。虽然也能很快达到目的，但这不是我想要的。然后还有个问题，nodejs的书上的实例教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="页面重构---前端的新工具的初探">
-<meta property="og:url" content="http://www.maiff.ren/2016/05/05/页面重构-前端的新工具的初探/index.html">
+<meta property="og:title" content="nodejs—博客搭建">
+<meta property="og:url" content="http://www.maiff.ren/2016/05/29/nodejs—博客搭建/index.html">
 <meta property="og:site_name" content="Maiff">
-<meta property="og:description" content="重构之后的 demo之前的demo
-之前的废话重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者">
-<meta property="og:image" content="http://i.imgur.com/hPrzHiY.jpg">
-<meta property="og:updated_time" content="2016-05-07T02:53:38.518Z">
+<meta property="og:description" content="最近觉得自己的前端到瓶颈了，于是就开始学习后端的内容，感觉可以不改变自己的语言思维就可以开始撸后端的代码。然后我发现我想多了。
+我以为我可以很快的学node我以为我可以很快上手node，然后很快的可以开始撸应用，的确我按照教程来很快搭建各种东西，网页、cms、博客、聊天室、然而我并不踏实，因为我感觉我是面向包编程。虽然也能很快达到目的，但这不是我想要的。然后还有个问题，nodejs的书上的实例教程">
+<meta property="og:updated_time" content="2016-05-29T14:37:01.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="页面重构---前端的新工具的初探">
-<meta name="twitter:description" content="重构之后的 demo之前的demo
-之前的废话重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者">
+<meta name="twitter:title" content="nodejs—博客搭建">
+<meta name="twitter:description" content="最近觉得自己的前端到瓶颈了，于是就开始学习后端的内容，感觉可以不改变自己的语言思维就可以开始撸后端的代码。然后我发现我想多了。
+我以为我可以很快的学node我以为我可以很快上手node，然后很快的可以开始撸应用，的确我按照教程来很快搭建各种东西，网页、cms、博客、聊天室、然而我并不踏实，因为我感觉我是面向包编程。虽然也能很快达到目的，但这不是我想要的。然后还有个问题，nodejs的书上的实例教程">
 
 
 
@@ -88,7 +87,7 @@
   };
 </script>
 
-  <title> 页面重构---前端的新工具的初探 | Maiff </title>
+  <title> nodejs—博客搭建 | Maiff </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +245,7 @@
             
             
               
-                页面重构---前端的新工具的初探
+                nodejs—博客搭建
               
             
           </h1>
@@ -258,8 +257,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-05T13:34:06+08:00" content="2016-05-05">
-              2016-05-05
+            <time itemprop="dateCreated" datetime="2016-05-29T22:26:39+08:00" content="2016-05-29">
+              2016-05-29
             </time>
           </span>
 
@@ -288,8 +287,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/05/页面重构-前端的新工具的初探/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/页面重构-前端的新工具的初探/" itemprop="commentsCount"></span>
+                <a href="/2016/05/29/nodejs—博客搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/nodejs—博客搭建/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -310,22 +309,13 @@
       
 
       
-        <p>重构之后的 <a href="http://115.159.24.134/require/" target="_blank" rel="external">demo</a><br>之前的<a href="http://maiff.ren/Portfolio/2/task-manage/index.html" target="_blank" rel="external">demo</a></p>
-<h3 id="之前的废话"><a href="#之前的废话" class="headerlink" title="之前的废话"></a>之前的废话</h3><p>重构之后用了之前的HTML和CSS文件，但是js文件完全没用，再看之前的代码，真的佩服我自己，用了各种奇葩的方式来完成任务，虽然功能都实现了，还没有什么bug（不能命名重名的任务），但是代码实在不优雅，各种全局变量，各种奇葩的操作方式。<br>然后在我打好基础之后我就趁五一的假期，由于之前一直用原生的JS，现在觉得尝试尝试jquery和requireJS，后者真的很好用。<br>再用requireJS之前，我看了阮一峰老师对模块化编程的理解，不得不佩服阮老师的文笔，什么东西我不懂，看他的文章，都能得到一个很好的理解，这里有<a href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html" target="_blank" rel="external">链接</a>，了解模块编程就不得不了解：CommonJS和AMD,两者都是一种标准，区别前者同步后这异步这是我的理解，其实会用requireJS我觉得就可以有很好的理解。</p>
-<h3 id="下面我来说说我是怎么用requireJS"><a href="#下面我来说说我是怎么用requireJS" class="headerlink" title="下面我来说说我是怎么用requireJS"></a>下面我来说说我是怎么用requireJS</h3><p><code>&lt;script src=&quot;js/require.js&quot; data-main=&quot;js/main&quot;&gt;&lt;/script&gt;</code><br>那个data-main就是入口函数<br>我的js目录是这样的<img src="http://i.imgur.com/hPrzHiY.jpg" alt=""><br>那个main就是我的主函数，test是我测试requireJS的，然后我就开始写了，我分成四个模块，然后主模块用了jquery，我以为每个模块都要引入jquery，我发现不用，然后我的jquery是引用外链的。<br>在我写的时候我以为requireJS调试起来肯定很困难，但是我发现并没有我想象的那么难，如果出错，完完全全的定位到出错的那行代码，这不由让我想到require的原理，我记得之前我看过阮一峰老师的一篇文章说的就是这个<a href="http://www.ruanyifeng.com/blog/2015/05/commonjs-in-browser.html" target="_blank" rel="external">不知道对不对</a>（to-do）。<br>5月6号添加：<br>用了原生的r.js来合并所有的模块，可以直接用npm来安装全局的r.js<br>然后直接通过<br><code>r.js -o built.js</code><br>其中built.js是配置文件，同时由于我的jquery是外部引用的，所以还要指定路径，不然会报错。<br>5月6日补充结束。</p>
-<hr>
-<p>我知道肯定我的浅薄认识还有好多requireJS的应用技巧我不知道，但是我相信给我时间我一定能完完全全的掌握。</p>
-<h3 id="jquery-的使用"><a href="#jquery-的使用" class="headerlink" title="jquery 的使用"></a>jquery 的使用</h3><p>jquery真的是一个很好用的库，太好用了！<br>我在用的时候主要是操作DOM，然后我深深的体会到$包装器的好处，同时我也对装饰者模式有更好的理解，之前我听了那种言论直接学jquery，我觉得没有很好地js基础是不能深刻理解掌握jquery。<br>然后我也碰到好多问题。</p>
-<pre><code>$(&apos;#test&apos;).click(
-    function(){
-        alert(this);    
-}
-)
-</code></pre><p>这个this是test这个元素，而不是包装之后的元素。<br>多用用jquery吧。</p>
-<h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><ul>
-<li>准备用ES6加上requireJS，我发现ES6需要转换，但是我不知道结合require会怎么样，所以放弃了，后来我看到ES6本来就包含模块的应用，所以接下来的目标熟悉ES6。</li>
-<li>然后ES6虽然大部分浏览器实现了90%的功能，最好能用工具转换为ES5，这就要了解构建工具，和nodeJS，这也是我接下来的任务。</li>
-<li>然后手边有个react的项目，我准备好好钻研react-redux-webpack/gulp来控制路由，数据流构建</li>
+        <p>最近觉得自己的前端到瓶颈了，于是就开始学习后端的内容，感觉可以不改变自己的语言思维就可以开始撸后端的代码。然后我发现我想多了。</p>
+<h3 id="我以为我可以很快的学node"><a href="#我以为我可以很快的学node" class="headerlink" title="我以为我可以很快的学node"></a>我以为我可以很快的学node</h3><p>我以为我可以很快上手node，然后很快的可以开始撸应用，的确我按照教程来很快搭建各种东西，网页、cms、博客、聊天室、然而我并不踏实，因为我感觉我是面向包编程。<br>虽然也能很快达到目的，但这不是我想要的。<br>然后还有个问题，nodejs的书上的实例教程经常会因为版本的问题各种报错。这也是面向包编程的缺点。但是我要了解的是基本思想，然后努力学习nodejs的基础，接下来多找找基础的思想语法找找，而不是做实际应用。然后前端方面不能停滞不前。</p>
+<h3 id="学习方式"><a href="#学习方式" class="headerlink" title="学习方式"></a>学习方式</h3><ul>
+<li>实际中遇到问题，通过搜索引擎解决问题之后记录下来，然后晚上总结下来然后查找详细信息，然后记录下来。</li>
+<li>前端最近做的再看一遍蝴蝶书，然后最近深入研究react重要的是基础思想，和api。</li>
+<li>学习新技术的错误思路，每次我学新东西的时候直接上手实践虽然可以让我快速认识到技术，但是这不是我想要的，应该从基础触发，然后慢慢的深入。就下来学习react也是，多逛逛社区，看看英文文献。</li>
+<li>最后近期的重点可能在复习方面了。</li>
 </ul>
 
       
@@ -338,17 +328,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/25/《JS高级程序设计》的理解/" rel="next" title="《JS高级程序设计》的理解">
-                <i class="fa fa-chevron-left"></i> 《JS高级程序设计》的理解
+              <a href="/2016/05/24/Node的初步学习与后期技术栈的展望/" rel="next" title="Node的初步学习与后期技术栈的展望">
+                <i class="fa fa-chevron-left"></i> Node的初步学习与后期技术栈的展望
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/08/我想我在前端的路上走远了/" rel="prev" title="我想我在前端的路上走远了">
-                我想我在前端的路上走远了 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -373,8 +359,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/05/页面重构-前端的新工具的初探/"
-           data-title="页面重构---前端的新工具的初探" data-url="http://www.maiff.ren/2016/05/05/页面重构-前端的新工具的初探/">
+      <div class="ds-thread" data-thread-key="2016/05/29/nodejs—博客搭建/"
+           data-title="nodejs—博客搭建" data-url="http://www.maiff.ren/2016/05/29/nodejs—博客搭建/">
       </div>
     
   </div>
@@ -488,7 +474,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#之前的废话"><span class="nav-number">1.</span> <span class="nav-text">之前的废话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面我来说说我是怎么用requireJS"><span class="nav-number">2.</span> <span class="nav-text">下面我来说说我是怎么用requireJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery-的使用"><span class="nav-number">3.</span> <span class="nav-text">jquery 的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#展望"><span class="nav-number">4.</span> <span class="nav-text">展望</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#我以为我可以很快的学node"><span class="nav-number">1.</span> <span class="nav-text">我以为我可以很快的学node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习方式"><span class="nav-number">2.</span> <span class="nav-text">学习方式</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
